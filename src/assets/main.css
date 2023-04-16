@@ -1,1 +1,5 @@
 @import './base.css';
+
+.section-wrapper {
+  min-height: 100vh;
+}
