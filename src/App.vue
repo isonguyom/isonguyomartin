@@ -14,15 +14,6 @@ const state = reactive({ isLoading: false });
       <Loader />
     </div>
     <div v-else>
-      <header>
-        <div class="wrapper">
-          <nav>
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/about">About</RouterLink>
-          </nav>
-        </div>
-      </header>
-
       <RouterView />
     </div>
   </div>
