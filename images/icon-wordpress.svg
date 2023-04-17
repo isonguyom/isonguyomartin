@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="icon-wordpress.svg"
+   id="svg4"
+   version="1.1"
+   viewBox="0 0 48 48"
+   height="70"
+   width="70">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg4"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:cy="35"
+     inkscape:cx="35"
+     inkscape:zoom="6.1710066"
+     showgrid="false"
+     id="namedview6"
+     inkscape:window-height="705"
+     inkscape:window-width="1366"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <path
+     style="stroke-width:2.74285714;stroke-miterlimit:4;stroke-dasharray:none"
+     id="path2"
+     d="M18.824 10.86h11.458m-24.782 0h9.738m6.064 0l11.345 30.653M27.099 10.86l8.446 22.821M6.552 10.86l11.292 30.513M12.349 10.86l8.394 22.681m4.479-12.104l-7.378 19.936m22.482-20.609l-7.679 20.749m7.679-20.749c.437-1.522 2.174-3.8 2.174-7.076c0-5.135-1.663-7.201-4.375-7.201c-2.215 0-3.003 2.128-3.003 3.906c0 5.278 5.204 6.007 5.204 10.371Z"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke="#b126e2"
+     fill="none" />
+</svg>
