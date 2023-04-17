@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <nav class="Nav">
         <div class="hamburger-wrapper" @click="toggleMenu">

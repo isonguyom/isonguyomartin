@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <section class="section-wrapper Hero">
         <div class="hero-text">
@@ -10,8 +11,10 @@
                 From Akwa Ibom State, Nigeria, Martin is ready to learn, connect, build, and grow.
             </p>
             <div class="socials">
-                <a v-for="(link, key) in socialLinks" :key="link.name" class="social-link" :href="link.link" :title="link.name"><svg-icon type="mdi" :path="link.icon"></svg-icon></a>
-                <a class="social-link" href="files/martin-isonguyo-cv.pdf" title="Download CV" download><svg-icon type="mdi" :path="fileIconPath"></svg-icon></a>
+                <a v-for="(link) in socialLinks" :key="link.name" class="social-link" :href="link.link"
+                    :title="link.name"><svg-icon type="mdi" :path="link.icon"></svg-icon></a>
+                <a class="social-link" href="files/martin-isonguyo-cv.pdf" title="Download CV" download><svg-icon type="mdi"
+                        :path="fileIconPath"></svg-icon></a>
             </div>
             <Button link="#" text="Hire me" />
         </div>
@@ -23,9 +26,11 @@
 import SvgIcon from '@jamescoyle/vue-icon';
 import { mdiFileDocumentOutline, mdiTwitter, mdiGithub, mdiAlphaB } from '@mdi/js';
 
+
 import Button from './Button.vue';
 
 export default {
+    // eslint-disable-next-line vue/no-reserved-component-names
     components: { Button, SvgIcon },
     data() {
         return {
@@ -43,7 +48,7 @@ export default {
 
 <style scoped lang="scss">
 .Hero {
-    background: url('images/martin-grayscale.png') no-repeat center;
+    background: url('/images/martin-grayscale.png') no-repeat center;
     background-size: contain;
     background-color: #1b1b1b;
     height: 115vh !important;
@@ -90,7 +95,7 @@ export default {
                 &:last-child {
                     margin-right: 0;
                 }
-                
+
 
                 &:hover {
                     text-decoration: none;
@@ -151,6 +156,7 @@ export default {
 
 @media screen and (min-width: 992px) {
     .Hero {
+        height: 110vh;
 
         .hero-text {
             width: 50%;
