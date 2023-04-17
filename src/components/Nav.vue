@@ -3,9 +3,9 @@
         <div class="hamburger-wrapper" @click="toggleMenu">
             <div class="hamburger" :class="{ active: menuIsActive }" />
         </div>
-        <TransitionGroup tag="ul" class="menu" appear>
+        <!-- <TransitionGroup tag="ul" class="menu" appear>
             <li></li>
-        </TransitionGroup>
+        </TransitionGroup> -->
     </nav>
 </template>
 
@@ -43,6 +43,7 @@ nav {
         cursor: pointer;
 
         .hamburger {
+            color: var(--title-light);
             z-index: 2;
             position: absolute;
             background-color: var(--title-light);

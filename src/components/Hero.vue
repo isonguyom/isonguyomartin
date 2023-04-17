@@ -10,8 +10,8 @@
                 From Akwa Ibom State, Nigeria, Martin is ready to learn, connect, build, and grow.
             </p>
             <div class="socials">
-                <a v-for="(link, key) in socialLinks" :key="link.name" class="social-link" :href="link.link">{{ link.icon }}</a>
-                <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">d</a>
+                <a v-for="(link, key) in socialLinks" :key="link.name" class="social-link" :href="link.link" :title="link.name"><svg-icon type="mdi" :path="link.icon"></svg-icon></a>
+                <a class="social-link" href="files/martin-isonguyo-cv.pdf" title="Download CV" download><svg-icon type="mdi" :path="fileIconPath"></svg-icon></a>
             </div>
             <Button link="#" text="Hire me" />
         </div>
@@ -20,15 +20,20 @@
 </template>
 
 <script>
+import SvgIcon from '@jamescoyle/vue-icon';
+import { mdiFileDocumentOutline, mdiTwitter, mdiGithub, mdiAlphaB } from '@mdi/js';
+
 import Button from './Button.vue';
+
 export default {
-    components: { Button },
+    components: { Button, SvgIcon },
     data() {
         return {
+            fileIconPath: mdiFileDocumentOutline,
             socialLinks: [
-                { name: 'Github', icon: 'G', link: 'https://github.com/isonguyom' },
-                { name: 'Behance', icon: 'Be', link: 'https://www.behance.net/martinisonguyo' },
-                { name: 'Twitter', icon: 't', link: 'https://twitter.com/IsonguyoM' },
+                { name: 'Github', icon: mdiGithub, link: 'https://github.com/isonguyom' },
+                { name: 'Behance', icon: mdiAlphaB, link: 'https://www.behance.net/martinisonguyo' },
+                { name: 'Twitter', icon: mdiTwitter, link: 'https://twitter.com/IsonguyoM' },
             ]
         }
     }
@@ -41,8 +46,8 @@ export default {
     background: url('images/martin-grayscale.png') no-repeat center;
     background-size: contain;
     background-color: #1b1b1b;
+    height: 115vh !important;
     background-blend-mode: soft-light;
-    height: fit-content;
 
     .hero-text {
         position: absolute;
@@ -67,6 +72,7 @@ export default {
 
         .socials {
             margin: 40px 0 50px;
+            display: flex;
 
             .social-link {
                 color: var(--title-light);
@@ -74,12 +80,17 @@ export default {
                 border-radius: 50%;
                 width: 40px;
                 height: 40px;
-                display: inline-flex;
-                display: -webkit-inline-flex;
+                display: flex;
+                display: -webkit-flex;
                 align-items: center;
                 justify-content: center;
                 margin-right: 1.5em;
                 transition: color border-color 0.5s ease;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+                
 
                 &:hover {
                     text-decoration: none;

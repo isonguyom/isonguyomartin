@@ -4,3 +4,8 @@
   min-height: 100vh;
   padding: 2em 5%;
 }
+
+.title1 {
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
