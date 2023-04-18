@@ -126,7 +126,7 @@ div.container {
         max-width: 250px;
         background-color: #ffffff2f;
         height: fit-content;
-        padding: 20px 10px;
+        padding: 10px;
         border-radius: 5px;
         margin-bottom: 4vw;
 
