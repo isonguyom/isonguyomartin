@@ -3,9 +3,9 @@
     <section class="section-wrapper Blog">
         <h3 class="title1">I can also write</h3>
         <div class="posts-wrapper">
-            <div class="post" v-for="post in posts" :key="post.title" :style="{ backgroundImage: 'url(' + `images/${post.image}` + ')' }">
+            <div class="post" v-for="post in posts" :key="post.title" :style="{ backgroundImage: 'url(' + `images/${post.image}` + ')'}">
                 <a :href="post.link" class="post-title">{{ post.title }}</a>
-                <p class="post-extract">{{ post.ecerpt }}</p>
+                <p class="post-extract">{{ post.ecerpt }}...</p>
             </div>
         </div>
         <Button id="readBtn" link="#" text="Read more" />
@@ -22,10 +22,10 @@ export default {
         return {
             posts: [
                 {
-                title: 'Article title', link: '', image: '', ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis...'
+                title: 'Article title', link: '', image: 'blog-img1.jpg', ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
             },
                 {
-                title: 'Article title', link: '', image: '', ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis...'
+                title: 'Article title', link: '', image: 'blog-img2.jpg', ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
             },
         ]
         }
@@ -49,7 +49,11 @@ export default {
             max-width: 370px;
             width: 80vw;
             height: fit-content;
-            background-color: #1b1b1b;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: soft-light;
+            background-color: #2b2b2bda;
             margin-bottom: 30px;
             padding: 5vw;
             text-align: center;

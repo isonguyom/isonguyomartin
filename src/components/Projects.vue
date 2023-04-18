@@ -31,11 +31,11 @@ export default {
     data() {
         return {
             projects: [
-                { name: 'Projectrum', caption: 'Projectrum project manager', image: 'img-projectrum', link: '' },
-                { name: 'Tiptop', caption: 'Tiptop design agency website', image: 'img-tiptop', link: '' },
-                { name: 'World Citizen', caption: 'World citizen website', image: 'img-world-citizen', link: '' },
-                { name: 'Quiz App', caption: 'JavaScript Quiz App', image: 'img-js-quiz-app', link: '' },
-                { name: 'Countdown Timer', caption: 'Vuejs countdown timer', image: 'img-countdown-timer', link: '' }
+                { name: 'Projectrum', caption: 'Projectrum project manager', image: 'img-projectrum', link: 'https://projectrum.netlify.app/#/' },
+                { name: 'Tiptop', caption: 'Tiptop design agency website', image: 'img-tiptop', link: 'https://tiptopdesign.netlify.app/' },
+                { name: 'World Citizen', caption: 'World citizen website', image: 'img-world-citizen', link: 'https://worldcitizendotorg.netlify.app/' },
+                { name: 'Quiz App', caption: 'JavaScript Quiz App', image: 'img-js-quiz-app', link: 'https://isonguyom.github.io/quizAppJs/' },
+                { name: 'Countdown Timer', caption: 'Vuejs countdown timer', image: 'img-countdown-timer', link: 'https://isonguyom.github.io/countdown-timer/' }
             ]
         }
     }
@@ -52,7 +52,10 @@ export default {
             width: 100%;
             text-align: center;
             margin-bottom: 50px;
-
+            
+            .title1 {
+                margin-bottom: 10px;
+            }
             .projects-text {
                 color: var(--text-light);
             }
@@ -136,6 +139,10 @@ export default {
                 justify-content: center;
                 padding-right: 25px;
                 max-width: 250px;
+
+                .title1 {
+                    text-align: left;
+                }
             }
 
             .project {

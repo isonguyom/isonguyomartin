@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import { reactive } from "vue";
 import Loader from './components/Loader.vue';
 import Nav from './components/Nav.vue';

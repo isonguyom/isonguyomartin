@@ -73,7 +73,7 @@ div.container {
             max-width: 350px;
             width: 80vw;
             margin-bottom: 40px;
-            background: linear-gradient(#E1E1E1, #e1e1e150);
+            background: linear-gradient(to bottom right, #E1E1E1, #e1e1e150);
             padding: 40px 3%;
             border-radius: 5px;
             box-shadow: 2px 2px 4px #e1e1e1da;
@@ -108,7 +108,7 @@ div.container {
 }
 
 .Tools {
-    background: linear-gradient(var(--primary-color), var(--secondary-color));
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
     color: var(--title-dark);
     font-weight: 600;
     display: flex;

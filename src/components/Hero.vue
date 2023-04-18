@@ -64,7 +64,7 @@ export default {
 
         .hero-caption {
             color: var(--primary-color);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-transform: uppercase;
             line-height: 1.3em;
             font-size: 6vw;
@@ -81,7 +81,7 @@ export default {
 
             .social-link {
                 color: var(--title-light);
-                border: 1px solid var(--title-light);
+                border: 1px solid var(--text-light);
                 border-radius: 50%;
                 width: 40px;
                 height: 40px;
