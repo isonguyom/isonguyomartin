@@ -5,7 +5,7 @@
         <div class="posts-wrapper">
             <div class="post" v-for="post in posts" :key="post.title" :style="{ backgroundImage: 'url(' + `images/${post.image}` + ')'}">
                 <a :href="post.link" class="post-title">{{ post.title }}</a>
-                <p class="post-extract">{{ post.ecerpt }}...</p>
+                <p class="post-ecerpt">{{ post.ecerpt }}<a id="more" :href="post.link">...</a></p>
             </div>
         </div>
         <Button id="readBtn" link="#" text="Read more" />
@@ -58,7 +58,8 @@ export default {
             padding: 5vw;
             text-align: center;
             color: var(--text-light);
-            border-radius: 5px;
+            border-radius: var(--border-radius);
+            transition: background 1s ease-in;
 
             .post-title {
                 display: block;
@@ -66,6 +67,23 @@ export default {
                 color: var(--title-light);
                 font-size: 1.2rem;
                 font-weight: 600;
+
+                &:hover {
+                    color: var(--secondary-color);
+                }
+            }
+
+            .post-ecerpt {
+
+                #more {
+                    font-size: 1.3rem;
+                    letter-spacing: 3px;
+                }
+            }
+
+            &:hover {
+                background-color: #2b2b2bf6;
+                background-blend-mode: darken;
             }
         }
     }

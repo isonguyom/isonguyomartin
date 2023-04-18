@@ -20,7 +20,7 @@ export default {
     color: var(--title-light);
     max-width: 100%;
     padding: 1em;
-    border-radius: 7px;
+    border-radius: var(--border-radius);
     width: 70vw;
     transition: all 0.5s ease;
 

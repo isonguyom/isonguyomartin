@@ -65,25 +65,27 @@ export default {
             display: block;
             max-width: 400px;
             width: 80vw;
-            border-radius: 5px;
+            border-radius: var(--border-radius);
             padding: 10px;
             background-color: #ffffff2d;
             margin-bottom: 40px;
             margin: 0 auto 40px;
+            overflow: hidden;
+            transition: padding 1s ease;
 
             .project-img {
-                border-radius: 5px 5px 0 0;
+                border-radius: var(--border-radius) var(--border-radius) 0 0;
                 display: block;
             }
 
             .project-caption {
                 display: block;
-                background-color: #555353;
+                background-color: #4e4c4c;
                 color: var(--title-light);
                 text-align: center;
                 width: 100%;
                 padding: 10px;
-                border-radius: 0 0 5px 5px;
+                border-radius: 0 0 var(--border-radius) var(--border-radius);
                 transition: all 0.5s ease;
                 text-transform: capitalize;
 
@@ -91,6 +93,10 @@ export default {
                     color: var(--secondary-color);
                     text-decoration: none;
                 }
+            }
+
+            &:hover {
+                padding: 0;
             }
         }
     }

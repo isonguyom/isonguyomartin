@@ -41,7 +41,7 @@ export default {
     .form-wrapper {
         width: 100%;
         background-color: #ffffff5b;
-        border-radius: 5px;
+        border-radius: var(--border-radius);
         padding: 1.3em;
         margin: 0 auto;
 
@@ -53,10 +53,19 @@ export default {
             button {
                 width: 100%;
                 padding: 1em;
-                border-radius: 5px;
-                border: 1px solid #9b9999;
+                border-radius: var(--border-radius);
+                border: 1px solid #2b2b2b1f;
                 margin-bottom: 20px;
                 background-color: #2b2b2b1a;
+                transition: border-color 0.5s ease;
+
+                &::placeholder {
+                    color: var(--text-dark);
+                }
+
+                &:hover {
+                    border: 1px solid var(--secondary-color);
+                }
             }
 
             button {
@@ -72,6 +81,7 @@ export default {
 
                 &:hover {
                     text-decoration: none;
+                    border: none;
                     background-color: var(--secondary-color);
                     color: var(--title-dark);
                 }

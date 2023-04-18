@@ -75,7 +75,7 @@ div.container {
             margin-bottom: 40px;
             background: linear-gradient(to bottom right, #E1E1E1, #e1e1e150);
             padding: 40px 3%;
-            border-radius: 5px;
+            border-radius: var(--border-radius);
             box-shadow: 2px 2px 4px #e1e1e1da;
             color: var(--text-dark);
 
@@ -127,7 +127,7 @@ div.container {
         background-color: #ffffff2f;
         height: fit-content;
         padding: 10px;
-        border-radius: 5px;
+        border-radius: var(--border-radius);
         margin-bottom: 4vw;
 
         .tool-icon {

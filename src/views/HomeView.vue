@@ -13,6 +13,6 @@ import Contact from '../components/Contact.vue';
     <Skills />
     <Projects />
     <Blog />
-    <Contact />
+    <Contact id="contact" />
   </main>
 </template>

@@ -16,7 +16,7 @@
                 <a class="social-link" href="files/martin-isonguyo-cv.pdf" title="Download CV" download><svg-icon type="mdi"
                         :path="fileIconPath"></svg-icon></a>
             </div>
-            <Button link="#" text="Hire me" />
+            <Button link="#contact" text="Hire me" />
         </div>
         <div class="circle" />
     </section>
