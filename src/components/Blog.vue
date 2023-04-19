@@ -44,9 +44,12 @@ export default {
 
     .posts-wrapper {
         margin: 35px 0;
+        display: flex;
+            flex-direction: column;
+            align-items: center;
         
         .post {
-            max-width: 370px;
+            max-width: 400px;
             width: 80vw;
             height: fit-content;
             background-size: cover;
@@ -98,11 +101,11 @@ export default {
     .Blog {
 
         .posts-wrapper {
-            display: flex;
+            flex-direction: row;
             justify-content: space-between;
 
             .post {
-                max-width: 400px;
+                max-width: 330px;
                 width: 45vw;
                 padding: 4.3vw;
             }
@@ -116,7 +119,7 @@ export default {
         .posts-wrapper {
 
             .post {
-                max-width: 500px;
+                max-width: 430px;
                 min-height: 300px;
                 padding: 5vw;
                 display: flex;

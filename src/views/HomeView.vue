@@ -9,10 +9,10 @@ import Contact from '../components/Contact.vue';
 
 <template>
   <main>
-    <Hero />
-    <Skills />
-    <Projects />
-    <Blog />
+    <Hero id="home"/>
+    <Skills id="skills"/>
+    <Projects id="projects"/>
+    <Blog id="blog"/>
     <Contact id="contact" />
   </main>
 </template>

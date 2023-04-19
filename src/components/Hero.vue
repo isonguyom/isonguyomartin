@@ -12,9 +12,8 @@
             </p>
             <div class="socials">
                 <a v-for="(link) in socialLinks" :key="link.name" class="social-link" :href="link.link"
-                    :title="link.name"><svg-icon type="mdi" :path="link.icon"></svg-icon></a>
-                <a class="social-link" href="files/martin-isonguyo-cv.pdf" title="Download CV" download><svg-icon type="mdi"
-                        :path="fileIconPath"></svg-icon></a>
+                    :title="link.name"><Icon :icon="link.icon" width="25" /></a>
+                <a class="social-link" href="files/martin-isonguyo-cv.pdf" title="Download CV" download><Icon icon="ph:file-text-light" width="25" /></a>
             </div>
             <Button link="#contact" text="Hire me" />
         </div>
@@ -23,22 +22,19 @@
 </template>
 
 <script>
-import SvgIcon from '@jamescoyle/vue-icon';
-import { mdiFileDocumentOutline, mdiTwitter, mdiGithub, mdiAlphaB } from '@mdi/js';
-
+import { Icon } from '@iconify/vue';
 
 import Button from './Button.vue';
 
 export default {
     // eslint-disable-next-line vue/no-reserved-component-names
-    components: { Button, SvgIcon },
+    components: { Button, Icon },
     data() {
         return {
-            fileIconPath: mdiFileDocumentOutline,
             socialLinks: [
-                { name: 'Github', icon: mdiGithub, link: 'https://github.com/isonguyom' },
-                { name: 'Behance', icon: mdiAlphaB, link: 'https://www.behance.net/martinisonguyo' },
-                { name: 'Twitter', icon: mdiTwitter, link: 'https://twitter.com/IsonguyoM' },
+                { name: 'Github', icon: 'ph:github-logo-light', link: 'https://github.com/isonguyom' },
+                { name: 'Behance', icon: 'ph:behance-logo-light', link: 'https://www.behance.net/martinisonguyo' },
+                { name: 'Twitter', icon: 'ph:twitter-logo-light', link: 'https://twitter.com/IsonguyoM' }
             ]
         }
     }
