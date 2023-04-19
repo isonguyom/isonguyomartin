@@ -7,13 +7,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="icon-javascript.svg"
-   id="svg4"
+   width="50"
+   height="50"
+   viewBox="0 0 17.142857 17.142857"
    version="1.1"
-   viewBox="0 0 24 24"
-   height="70"
-   width="70">
+   id="svg4"
+   sodipodi:docname="icon-javascript.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)">
   <metadata
      id="metadata10">
     <rdf:RDF>
@@ -22,34 +22,54 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
      id="defs8" />
   <sodipodi:namedview
-     inkscape:current-layer="svg4"
-     inkscape:window-maximized="1"
-     inkscape:window-y="-8"
-     inkscape:window-x="-8"
-     inkscape:cy="35"
-     inkscape:cx="35"
-     inkscape:zoom="6.1710066"
-     showgrid="false"
-     id="namedview6"
-     inkscape:window-height="705"
-     inkscape:window-width="1366"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0"
-     guidetolerance="10"
-     gridtolerance="10"
-     objecttolerance="10"
-     borderopacity="1"
+     inkscape:snap-object-midpoints="true"
+     inkscape:document-rotation="0"
+     pagecolor="#ffffff"
      bordercolor="#666666"
-     pagecolor="#ffffff" />
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="5.8715696"
+     inkscape:cx="22.400016"
+     inkscape:cy="28.265062"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4">
+    <sodipodi:guide
+       id="guide830"
+       orientation="0,50"
+       position="0,17.142857" />
+    <sodipodi:guide
+       id="guide832"
+       orientation="50,0"
+       position="17.142857,17.142857" />
+    <sodipodi:guide
+       id="guide834"
+       orientation="0,-50"
+       position="17.142857,0" />
+    <sodipodi:guide
+       id="guide836"
+       orientation="-50,0"
+       position="0,0" />
+  </sodipodi:namedview>
   <path
-     style="stroke-width:1.19272"
+     fill="#2b2b2b"
+     d="m 3.8340216,12.182231 q -0.7402198,0 -1.2589657,-0.527177 Q 2.0563099,11.127877 2.0574942,10.37683 V 9.1732294 H 3.8340216 V 10.37683 H 5.6105489 V 4.9606251 H 7.3870763 V 10.37683 q 0,0.75225 -0.518746,1.279428 -0.518746,0.527177 -1.2577814,0.525973 z m 6.5139334,0 q -0.5033488,0 -0.8444417,-0.346636 -0.341094,-0.346638 -0.33991,-0.856965 V 9.7750294 H 10.940131 V 10.37683 h 2.368703 V 9.1732294 h -2.960879 q -0.5033488,0 -0.8444417,-0.346638 -0.341094,-0.346637 -0.33991,-0.856964 V 6.1642262 q 0,-0.5115305 0.341093,-0.8581676 0.3410939,-0.3466371 0.8432587,-0.3454335 h 3.553054 q 0.50335,0 0.844443,0.3466371 0.341094,0.3466371 0.339909,0.856964 v 1.2036012 h -1.776527 v -0.601801 h -2.368703 v 1.203601 h 2.960878 q 0.50335,0 0.844443,0.346638 0.341094,0.346637 0.339909,0.856964 V 10.97863 q 0,0.511531 -0.341093,0.858167 -0.341094,0.346638 -0.843259,0.345434 z"
      id="path2"
-     d="m 6.7726778,15.611152 q -0.7386441,0 -1.2562858,-0.527228 -0.5176418,-0.527228 -0.51646,-1.278348 v -1.203717 h 1.7727458 v 1.203717 H 8.5454236 V 8.3888478 h 1.7727454 v 5.4167282 q 0,0.752323 -0.5176414,1.279552 -0.5176418,0.527228 -1.255104,0.526024 z m 6.5000682,0 q -0.502278,0 -0.842645,-0.34667 -0.340368,-0.346671 -0.339186,-0.857047 v -1.203718 h 1.772746 v 0.601859 h 2.363661 v -1.203717 h -2.954576 q -0.502278,0 -0.842645,-0.346671 -0.340368,-0.346671 -0.339186,-0.857047 V 9.5925652 q 0,-0.5115799 0.340367,-0.8582505 0.340368,-0.3466706 0.841464,-0.3454669 h 3.545491 q 0.502278,0 0.842645,0.3466706 0.340368,0.3466706 0.339186,0.8570468 v 1.2037178 h -1.772746 v -0.601859 h -2.363661 v 1.203717 h 2.954576 q 0.502278,0 0.842645,0.346671 0.340368,0.346671 0.339186,0.857047 v 1.805576 q 0,0.51158 -0.340367,0.85825 -0.340368,0.346671 -0.841464,0.345467 z"
-     fill="#2b2b2b" />
+     style="fill:none;stroke:#2b2b2b;stroke-width:0.51428571;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
 </svg>
