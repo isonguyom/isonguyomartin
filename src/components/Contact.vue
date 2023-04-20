@@ -4,11 +4,13 @@
     <section class="section-wrapper Contact">
         <h3 class="title1">Contact</h3>
         <div class="form-wrapper">
-            <form id="contactForm" action="">
-                <input type="text" name="contactName" id="contactName" placeholder="Your Name">
-                <input type="email" name="contactEmail" id="contactEmail" placeholder="Your Email">
-                <input type="text" name="contactSubject" id="contactSubject" placeholder="Subject">
-                <textarea name="contactMessage" id="contactMessage" cols="30" rows="10" placeholder="Message"></textarea>
+            <div ref="feedback" class="feedback">{{ feedbackMessage }}</div>
+            <form id="contactForm" @submit.prevent="sendEmail">
+                <input type="text" name="contactName" id="contactName" v-model="contactName" placeholder="Your Name" required>
+                <input type="email" name="contactEmail" id="contactEmail" v-model="contactEmail" placeholder="Your Email" required>
+                <input type="text" name="contactSubject" id="contactSubject" v-model="contactSubject" placeholder="Subject" required>
+                <textarea name="contactMessage" id="contactMessage" v-model="contactMessage" cols="30" rows="10"
+                    placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </div>
@@ -18,11 +20,45 @@
 </template>
 
 <script>
+import emailjs from 'emailjs-com';
+
+
 export default {
     data() {
         return {
-            copyrightYear: new Date().getFullYear(new Date())
+            copyrightYear: new Date().getFullYear(new Date()),
+            feedbackMessage: '',
+            contactName: '',
+            contactEmail: '',
+            contactSubject: '',
+            contactMessage: ''
         }
+    },
+
+    methods: {
+        sendEmail(e) {
+            try {
+                emailjs.sendForm('service_tn8g7d4', 'template_n7mt6si', e.target,
+                    'WSDDECr6b9S02Oa1T', {
+                    contactName: this.contactName,
+                    contactEmail: this.contactEmail,
+                    contactSubject: this.contactSubject,
+                    contactMessage: this.contactMessage
+                })
+                
+                this.$refs.feedback.classList.remove("error")
+                this.feedbackMessage = 'Message sent successfully'
+            } catch (error) {
+                console.log({ error })
+                this.$refs.feedback.classList.add("error")
+                this.feedbackMessage = error + 'Message sent successfully'
+            }
+            // Reset form field
+            this.contactName = ''
+            this.contactEmail = ''
+            this.contactSubject = ''
+            this.contactMessage = ''
+        },
     }
 }
 </script>
@@ -44,6 +80,15 @@ export default {
         border-radius: var(--border-radius);
         padding: 1.3em;
         margin: 0 auto;
+
+        .feedback {
+            padding: 1em;
+            color: green;
+
+            &.error {
+                color: red;
+            }
+        }
 
         #contactForm {
             width: 100%;

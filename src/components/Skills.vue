@@ -31,9 +31,9 @@ export default {
     data() {
         return {
             skills: [
-                { title: 'Frontend Development', icon: 'iconoir:dev-mode-laptop', activeBg: true, text: 'Lorem ipsum dolor sit amet consectetur. Convallis ultrices nunc consectetur ipsum laoreet neque ut arcu. In duis ut varius pulvinar ornare aliquet dui quis con' },
-                { title: 'Wordpress', icon: 'arcticons:wordpress', activeBg: false, text: 'Lorem ipsum dolor sit amet consectetur. Convallis ultrices nunc consectetur ipsum laoreet neque ut arcu. In duis ut varius pulvinar ornare aliquet dui quis con' },
-                { title: 'UI/UX Design', icon: 'solar:window-frame-outline', activeBg: false, text: 'Lorem ipsum dolor sit amet consectetur. Convallis ultrices nunc consectetur ipsum laoreet neque ut arcu. In duis ut varius pulvinar ornare aliquet dui quis con' }
+                { title: 'Frontend Development', icon: 'iconoir:dev-mode-laptop', activeBg: true, text: 'Amazing websites are simple and clean. Minimalism is the concept, and minimalism is my concept.' },
+                { title: 'Wordpress', icon: 'arcticons:wordpress', activeBg: false, text: 'Wordpress is the most popular CMS-based website platform. I build good and efficient wordpress websites.' },
+                { title: 'UI/UX Design', icon: 'solar:window-frame-outline', activeBg: false, text: 'Although each product is unique, a good design offers it meaning and efficiently communicates with the user.' }
             ],
 
             tools: [
