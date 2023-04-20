@@ -6,9 +6,12 @@
         <div class="form-wrapper">
             <div ref="feedback" class="feedback">{{ feedbackMessage }}</div>
             <form id="contactForm" @submit.prevent="sendEmail">
-                <input type="text" name="contactName" id="contactName" v-model="contactName" placeholder="Your Name" required>
-                <input type="email" name="contactEmail" id="contactEmail" v-model="contactEmail" placeholder="Your Email" required>
-                <input type="text" name="contactSubject" id="contactSubject" v-model="contactSubject" placeholder="Subject" required>
+                <input type="text" name="contactName" id="contactName" v-model="contactName" placeholder="Your Name"
+                    required>
+                <input type="email" name="contactEmail" id="contactEmail" v-model="contactEmail" placeholder="Your Email"
+                    required>
+                <input type="text" name="contactSubject" id="contactSubject" v-model="contactSubject" placeholder="Subject"
+                    required>
                 <textarea name="contactMessage" id="contactMessage" v-model="contactMessage" cols="30" rows="10"
                     placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
@@ -45,7 +48,7 @@ export default {
                     contactSubject: this.contactSubject,
                     contactMessage: this.contactMessage
                 })
-                
+
                 this.$refs.feedback.classList.remove("error")
                 this.feedbackMessage = 'Message sent successfully'
             } catch (error) {
@@ -171,5 +174,4 @@ export default {
             }
         }
     }
-}
-</style>
+}</style>

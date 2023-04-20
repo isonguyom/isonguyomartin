@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <section class="section-wrapper Loader-wrapper">
     <div class="loader"></div>

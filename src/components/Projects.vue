@@ -5,11 +5,8 @@
         <div class="projects-inner">
             <div class="projects-header">
                 <h3 class="title1">My projects</h3>
-                <p class="projects-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis veritatis, aperiam, placeat
-                    voluptatem
-                    repellendus aut illo vitae unde ullam fugit, autem quisquam? Architecto repellendus, quas assumenda
-                    aspernatur praesentium necessitatibus quisquam.</p>
+                <p class="projects-text">Through the course of my learning, I am proud to have built and contributed to
+                    these projects.</p>
             </div>
 
             <div class="project" v-for="project in projects" :key="project.name">
@@ -52,10 +49,11 @@ export default {
             width: 100%;
             text-align: center;
             margin-bottom: 50px;
-            
+
             .title1 {
                 margin-bottom: 10px;
             }
+
             .projects-text {
                 color: var(--text-light);
             }
@@ -132,8 +130,8 @@ export default {
     .Projects {
 
         .projects-inner {
-           justify-content: space-between;
-           padding-top: 100px;
+            justify-content: space-between;
+            padding-top: 100px;
 
             .projects-header {
                 width: 33%;

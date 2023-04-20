@@ -3,7 +3,8 @@
     <section class="section-wrapper Blog">
         <h3 class="title1">I can also write</h3>
         <div class="posts-wrapper">
-            <div class="post" v-for="post in posts" :key="post.title" :style="{ backgroundImage: 'url(' + `images/${post.image}` + ')'}">
+            <div class="post" v-for="post in posts" :key="post.title"
+                :style="{ backgroundImage: 'url(' + `images/${post.image}` + ')' }">
                 <a :href="post.link" class="post-title">{{ post.title }}</a>
                 <p class="post-ecerpt">{{ post.ecerpt }}<a id="more" :href="post.link">...</a></p>
             </div>
@@ -22,12 +23,12 @@ export default {
         return {
             posts: [
                 {
-                title: 'Article title', link: '', image: 'blog-img1.jpg', ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
-            },
+                    title: 'Article title', link: '', image: 'blog-img1.jpg', ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
+                },
                 {
-                title: 'Article title', link: '', image: 'blog-img2.jpg', ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
-            },
-        ]
+                    title: 'Article title', link: '', image: 'blog-img2.jpg', ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
+                },
+            ]
         }
     }
 }
@@ -45,9 +46,9 @@ export default {
     .posts-wrapper {
         margin: 35px 0;
         display: flex;
-            flex-direction: column;
-            align-items: center;
-        
+        flex-direction: column;
+        align-items: center;
+
         .post {
             max-width: 400px;
             width: 80vw;

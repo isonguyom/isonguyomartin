@@ -6,7 +6,9 @@
         </div>
         <TransitionGroup tag="ul" class="menu" appear v-if="menuIsActive">
             <li class="menu-item" v-for="item in menuItems" :key="item.name" @click="toggleMenu"><router-link
-                    :to="{ path: '/', hash: item.hash }"><Icon class="menu-item-icon" :icon="item.icon" width="25" /><span>{{ item.name }}</span></router-link></li>
+                    :to="{ path: '/', hash: item.hash }">
+                    <Icon class="menu-item-icon" :icon="item.icon" width="25" /><span>{{ item.name }}</span>
+                </router-link></li>
         </TransitionGroup>
     </nav>
 </template>
@@ -15,7 +17,7 @@
 import { Icon } from '@iconify/vue';
 
 export default {
-    components: {Icon},
+    components: { Icon },
     data() {
         return {
             menuIsActive: false,
@@ -159,14 +161,15 @@ nav {
                     background-color: var(--secondary-color);
                     color: var(--title-dark);
 
-                    
+
                     .menu-item-icon {
                         color: var(--title-dark);
                     }
                 }
             }
 
-            &:nth-child(2), &:nth-child(4) {
+            &:nth-child(2),
+            &:nth-child(4) {
                 left: -120px;
             }
 
@@ -189,5 +192,4 @@ nav {
             -ms-transform: translate(0, -50%);
         }
     }
-}
-</style>
+}</style>

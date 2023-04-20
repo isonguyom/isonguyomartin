@@ -6,7 +6,7 @@
             <div class="skills-wrapper">
                 <div class="skill" :class="{ primaryBg: skill.activeBg }" v-for="skill in skills" :key="skill.title">
                     <div class="skill-header">
-                        <Icon class="icon" :icon="skill.icon" width="80" stroke-width="2"/>
+                        <Icon class="icon" :icon="skill.icon" width="80" stroke-width="2" />
                         <h4 class="skill-title">{{ skill.title }}</h4>
                     </div>
                     <p class="skill-text">{{ skill.text }}</p>
@@ -27,7 +27,7 @@
 import { Icon } from '@iconify/vue';
 
 export default {
-    components: {Icon},
+    components: { Icon },
     data() {
         return {
             skills: [
@@ -106,10 +106,11 @@ div.container {
             &.primaryBg {
                 background: linear-gradient(#B126E2, #b026e283);
                 color: var(--text-light);
-                
+
                 .icon {
                     color: var(--secondary-color)
                 }
+
                 .skill-title {
                     color: var(--title-light);
                 }
@@ -199,4 +200,5 @@ div.container {
             margin-bottom: 3vw;
         }
     }
-}</style>
+}
+</style>

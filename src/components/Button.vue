@@ -7,7 +7,7 @@
 
 <script>
 export default {
-    props: ['text', 'link'],
+    props: ['text', 'link']
 }
 </script>
 
@@ -23,7 +23,6 @@ export default {
     border-radius: var(--border-radius);
     width: 70vw;
     transition: all 0.5s ease;
-
 
     &:hover {
         text-decoration: none;

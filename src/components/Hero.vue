@@ -4,16 +4,18 @@
         <div class="hero-text">
             <h1 class="hero-caption caption">Frontend Developer</h1>
             <p class="para hero-para">
-                It all started with a desire to understand how the web works and the technology behind this virtual-reality
-                environment. Therefore, being able to build with some of these tools today feels good.
-                I am a graduate of Marine Engineering. So you can understand my enthusiasm about digitalization in the
-                maritime industry and my eagerness to contribute to any related project.
-                From Akwa Ibom State, Nigeria, Martin is ready to learn, connect, build, and grow.
+                Hey, my name is Martin Isonguyo, and I am a frontend developer from Nigeria. It is my conviction that web
+                applications can be more minimal, efficient, and reflective.<br />I am enthusiastic about providing digital
+                solutions to emerging problems in the maritime industry. <br />I am available to learn, work, connect,
+                build, and grow.
             </p>
             <div class="socials">
-                <a v-for="(link) in socialLinks" :key="link.name" class="social-link" :href="link.link"
-                    :title="link.name"><Icon :icon="link.icon" width="25" /></a>
-                <a class="social-link" href="files/martin-isonguyo-cv.pdf" title="Download CV" download><Icon icon="ph:file-text-light" width="25" /></a>
+                <a v-for="(link) in socialLinks" :key="link.name" class="social-link" :href="link.link" :title="link.name">
+                    <Icon :icon="link.icon" width="25" />
+                </a>
+                <a class="social-link" href="files/martin-isonguyo-cv.pdf" title="Download CV" download>
+                    <Icon icon="ph:file-text-light" width="25" />
+                </a>
             </div>
             <Button link="#contact" text="Hire me" />
         </div>

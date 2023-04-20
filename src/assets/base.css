@@ -5,8 +5,8 @@
 :root {
   --text-font: 'Signika Negative', sans-serif;
   --title-font: 'Inknut Antiqua', serif;
-  --primary-color: #B126E2;
-  --secondary-color: #FFEC8E;
+  --primary-color: #b126e2;
+  --secondary-color: #ffec8e;
   --text-light: #cecece;
   --text-dark: #6e6e6e;
   --title-light: #f1f1f1;
@@ -64,7 +64,7 @@ a {
 }
 
 a:hover {
-color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 img {
