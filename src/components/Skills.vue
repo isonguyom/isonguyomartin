@@ -25,6 +25,10 @@
 
 <script>
 import { Icon } from '@iconify/vue';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
     components: { Icon },
@@ -51,6 +55,39 @@ export default {
                 { caption: 'Github', icon: 'icon-github' }
             ]
         }
+    },
+
+    mounted() {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".Skills",
+                // start: "10px",
+                // end: "+=1000",
+                // scrub: 1,
+                pin: true,
+            }
+        });
+        tl.from(".skill", {
+            x: -500,
+            duration: 2,
+            stagger: .2,
+            opacity: 0,
+        })
+            .from(".title1", {
+                delay: .5,
+                duration: 1,
+                ease: 'bounce.out',
+                y: -100,
+                opacity: 0,
+            });
+
+        gsap.from(".tool", {
+            scrollTrigger: ".Tools",
+            delay: 0.5,
+            duration: 3,
+            stagger: .3,
+            opacity: 0,
+        });
     }
 }
 </script>
@@ -80,7 +117,7 @@ div.container {
             background: linear-gradient(to bottom right, #E1E1E1, #e1e1e150);
             padding: 40px 3%;
             border-radius: var(--border-radius);
-            box-shadow: 2px 2px 4px #e1e1e1da;
+            box-shadow: 2px 2px 4px #e1e1e154;
             color: var(--text-dark);
 
             .skill-header {

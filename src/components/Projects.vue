@@ -20,6 +20,10 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 import Button from './Button.vue';
 
 export default {
@@ -35,6 +39,19 @@ export default {
                 { name: 'Countdown Timer', caption: 'Vuejs countdown timer', image: 'img-countdown-timer', link: 'https://isonguyom.github.io/countdown-timer/' }
             ]
         }
+    },
+
+    mounted() {
+        gsap.from(".project img", {
+            scrollTrigger: ".project", // start the animation when ".box" enters the viewport (once)
+            // scrub: 1,
+            delay: .5,
+            duration: 1,
+            ease: 'bounce.out',
+            y: -100,
+            opacity: 0,
+            stagger: .2
+        });
     }
 }
 </script>

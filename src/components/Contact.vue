@@ -24,6 +24,10 @@
 
 <script>
 import emailjs from 'emailjs-com';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 export default {
@@ -36,6 +40,17 @@ export default {
             contactSubject: '',
             contactMessage: ''
         }
+    },
+
+    mounted() {
+        gsap.from(".Contact", {
+            scrollTrigger: ".Contact", // start the animation when ".box" enters the viewport (once)
+            // scrub: 1,
+            delay: .5,
+            duration: 1,
+            opacity: 0,
+            stagger: .2
+        });
     },
 
     methods: {
@@ -68,7 +83,7 @@ export default {
 
 <style scoped lang="scss">
 .Contact {
-    background: url('/images/contact-bg.jpg') center;
+    background: url('/images/contact-bg.jpg') center fixed;
     background-size: cover;
     background-color: #2b2b2b7c;
     background-blend-mode: soft-light;

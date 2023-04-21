@@ -17,7 +17,9 @@
                     <Icon icon="ph:file-text-light" width="25" />
                 </a>
             </div>
-            <Button link="#contact" text="Hire me" />
+            <div class="btn-wrapper">
+                <Button link="#contact" text="Hire me" />
+            </div>
         </div>
         <div class="circle" />
     </section>
@@ -25,6 +27,10 @@
 
 <script>
 import { Icon } from '@iconify/vue';
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 import Button from './Button.vue';
 
@@ -39,7 +45,47 @@ export default {
                 { name: 'Twitter', icon: 'ph:twitter-logo-light', link: 'https://twitter.com/IsonguyoM' }
             ]
         }
-    }
+    },
+
+    mounted() {
+        var tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".Hero",
+            }
+        });
+
+        tl.from(".Hero", {
+            duration: 0.5,
+            opacity: 0,
+        })
+            .from(".hero-caption", {
+                delay: 0.2,
+                duration: 1,
+                ease: 'bounce.out',
+                y: -200,
+                opacity: 0,
+            })
+            .from(".hero-para", {
+                duration: .7,
+                x: -50,
+                opacity: 0,
+            })
+            .from(".social-link", {
+                duration: 1,
+                stagger: .2,
+                opacity: 0
+            })
+            .from(".btn-wrapper", {
+                duration: 0.7,
+                y: 200,
+                opacity: 0,
+            })
+            .from(".circle", {
+                duration: 1,
+                scale: 0,
+                opacity: 0
+            });
+    },
 }
 </script>
 
@@ -51,6 +97,7 @@ export default {
     background-color: #1b1b1b;
     height: 115vh !important;
     background-blend-mode: soft-light;
+    overflow-y: hidden;
 
     .hero-text {
         position: absolute;
@@ -101,6 +148,11 @@ export default {
                     border-color: var(--secondary-color);
                 }
             }
+        }
+
+        .btn-wrapper {
+            width: fit-content;
+            height: fit-content;
         }
     }
 

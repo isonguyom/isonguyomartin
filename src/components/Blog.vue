@@ -14,6 +14,10 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 import Button from './Button.vue';
 
 export default {
@@ -30,6 +34,18 @@ export default {
                 },
             ]
         }
+    },
+
+    mounted() {
+        gsap.from(".post", {
+            scrollTrigger: ".posts-wrapper", // start the animation when ".box" enters the viewport (once)
+            // scrub: 1,
+            delay: .5,
+            duration: 1,
+            y: 100,
+            opacity: 0,
+            stagger: .2
+        });
     }
 }
 </script>
