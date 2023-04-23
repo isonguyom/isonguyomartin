@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <div class="container">
-        <section class="section-wrapper Skills">
+    <section class="container section-wrapper">
+        <div class="Skills">
             <h3 class="title1">How i can serve you</h3>
             <div class="skills-wrapper">
                 <div class="skill" :class="{ primaryBg: skill.activeBg }" v-for="skill in skills" :key="skill.title">
@@ -13,14 +13,14 @@
                 </div>
             </div>
 
-        </section>
-        <section class="section-wrapper Tools">
+        </div>
+        <div class="Tools">
             <div class="tool" v-for="tool in tools" :key="tool.caption">
                 <img class="tool-icon" :src="`images/${tool.icon}.svg`" :alt="tool.caption">
                 <p class="tool-caption">{{ tool.caption }}</p>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -61,10 +61,6 @@ export default {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".Skills",
-                // start: "10px",
-                // end: "+=1000",
-                // scrub: 1,
-                pin: true,
             }
         });
         tl.from(".skill", {
@@ -93,35 +89,31 @@ export default {
 </script>
 
 <style scoped lang="scss">
-div.container {
+.container {
     width: 100%;
     height: fit-content;
 }
 
 .Skills {
 
-    .title1 {
-        text-align: center;
-        margin-bottom: 35px;
-    }
-
     .skills-wrapper {
         display: flex;
+        display: -webkit-flex;
         flex-direction: column;
         align-items: center;
 
         .skill {
-            max-width: 350px;
+            max-width: 400px;
             width: 80vw;
             margin-bottom: 40px;
-            background: linear-gradient(to bottom right, #E1E1E1, #e1e1e150);
+            background: linear-gradient(to bottom right, #111111, #11111165);
             padding: 40px 3%;
             border-radius: var(--border-radius);
-            box-shadow: 2px 2px 4px #e1e1e154;
-            color: var(--text-dark);
+            box-shadow: var(--box-shadow);
 
             .skill-header {
                 display: flex;
+                display: -webkit-flex;
                 align-items: center;
                 margin-bottom: 20px;
 
@@ -131,8 +123,8 @@ div.container {
 
                 .skill-title {
                     line-height: 1.2em;
-                    color: var(--title-dark);
                     margin-left: 10px;
+                    color: var(--title-light);
                 }
             }
 
@@ -141,15 +133,10 @@ div.container {
             }
 
             &.primaryBg {
-                background: linear-gradient(#B126E2, #b026e283);
-                color: var(--text-light);
+                background: var(--primary-gradient);
 
                 .icon {
                     color: var(--secondary-color)
-                }
-
-                .skill-title {
-                    color: var(--title-light);
                 }
             }
         }
@@ -157,36 +144,34 @@ div.container {
 }
 
 .Tools {
-    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
-    color: var(--title-dark);
+    background: linear-gradient(to top right, #b126e2, #ffec8e6c, #b026e2d0);
+    color: var(--secondary-color);
     font-weight: 600;
     display: flex;
+    display: -webkit-flex;
     justify-content: center;
     flex-wrap: wrap;
     min-height: fit-content;
-    padding-top: 4vw;
-    padding-bottom: 0;
+    padding: 2vw 2vw 0;
+    margin-top: 100px;
 
     .tool {
         display: flex;
+        display: -webkit-flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         max-width: 250px;
-        background-color: #ffffff2f;
+        border: 1px solid var(--secondary-color);
         height: fit-content;
-        padding: 10px;
+        padding: 5px;
         border-radius: var(--border-radius);
-        margin-bottom: 4vw;
+        margin-bottom: 2vw;
 
         .tool-icon {
             display: block;
-            margin-right: 9px;
-            width: 50px;
-            height: 50px;
-            border: 1px solid var(--text-dark);
-            border-radius: 50%;
-            padding: 7px;
+            margin-right: 4px;
+            padding: 6px;
         }
 
         .tool-caption {
@@ -230,12 +215,8 @@ div.container {
 
 
     .Tools {
-        margin-top: 60px;
-        padding-top: 3vw;
-
-        .tool {
-            margin-bottom: 3vw;
-        }
+        margin-top: 150px;
+        padding-top: 3vw 3vw 0;
     }
 }
 </style>

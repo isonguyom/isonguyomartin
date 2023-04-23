@@ -16,30 +16,30 @@ export default {
     display: block;
     text-align: center;
     text-transform: capitalize;
-    background-color: var(--primary-color);
+    background: var(--primary-gradient);
     color: var(--title-light);
     max-width: 100%;
-    padding: 1em;
+    padding: 0.7em;
     border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     width: 70vw;
     transition: all 0.5s ease;
 
     &:hover {
         text-decoration: none;
-        background-color: var(--secondary-color);
-        color: var(--title-dark);
+        background-color: #ffec8e;
     }
 }
 
 @media screen and (min-width: 480px) {
     .btn {
-        width: 50vw;
+        width: 45vw;
     }
 }
 
 @media screen and (min-width: 992px) {
     .btn {
-        width: 30vw;
+        width: 25vw;
     }
 }
 

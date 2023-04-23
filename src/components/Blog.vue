@@ -3,10 +3,16 @@
     <section class="section-wrapper Blog">
         <h3 class="title1">I can also write</h3>
         <div class="posts-wrapper">
-            <div class="post" v-for="post in posts" :key="post.title"
-                :style="{ backgroundImage: 'url(' + `images/${post.image}` + ')' }">
-                <a :href="post.link" class="post-title">{{ post.title }}</a>
-                <p class="post-ecerpt">{{ post.ecerpt }}<a id="more" :href="post.link">...</a></p>
+            <div class="post" v-for="post in posts" :key="post.title">
+                <img class="post-img" :src="`images/${post.image}`" :alt="post.title">
+                <div class="post-text">
+                    <a :href="post.link" class="post-title">{{ post.title }}</a>
+                    <p class="post-ecerpt">{{ post.ecerpt }}<a id="more" :href="post.link">...</a></p>
+                    <div class="post-footer">
+                        <a class="post-platform" href="">{{ post.platform }}</a><span class="post-date">{{ post.date
+                        }}</span>
+                    </div>
+                </div>
             </div>
         </div>
         <Button id="readBtn" link="#" text="Read more" />
@@ -14,10 +20,10 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 import Button from './Button.vue';
 
 export default {
@@ -27,41 +33,41 @@ export default {
         return {
             posts: [
                 {
-                    title: 'Article title', link: '', image: 'blog-img1.jpg', ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
+                    title: 'Article title', link: '', image: 'blog-img1.png',
+                    platform: 'Medium', platformLink: '', date: '2 April 2023',
+                    ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
                 },
                 {
-                    title: 'Article title', link: '', image: 'blog-img2.jpg', ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
+                    title: 'Article title', link: '', image: 'blog-img2.png',
+                    platform: 'Hashnode', platformLink: '', date: '20 March 2023',
+                    ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
                 },
             ]
         }
     },
 
-    mounted() {
-        gsap.from(".post", {
-            scrollTrigger: ".posts-wrapper", // start the animation when ".box" enters the viewport (once)
-            // scrub: 1,
-            delay: .5,
-            duration: 1,
-            y: 100,
-            opacity: 0,
-            stagger: .2
-        });
-    }
+    // mounted() {
+    //     gsap.from(".post", {
+    //         scrollTrigger: ".post", // start the animation when ".box" enters the viewport (once)
+    //         // scrub: 1,
+    //         delay: .5,
+    //         duration: 1,
+    //         y: 100,
+    //         opacity: 1,
+    //         stagger: .2
+    //     });
+    // }
 }
 </script>
 
 <style scoped lang="scss">
 .Blog {
-    background-color: var(--secondary-color);
     min-height: fit-content;
-
-    .title1 {
-        text-align: center;
-    }
 
     .posts-wrapper {
         margin: 35px 0;
         display: flex;
+        display: -webkit-flex;
         flex-direction: column;
         align-items: center;
 
@@ -69,41 +75,43 @@ export default {
             max-width: 400px;
             width: 80vw;
             height: fit-content;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-blend-mode: soft-light;
-            background-color: #2b2b2bda;
+            background: linear-gradient(to right, #300441, #ffec8e33);
             margin-bottom: 30px;
-            padding: 5vw;
-            text-align: center;
-            color: var(--text-light);
             border-radius: var(--border-radius);
-            transition: background 1s ease-in;
+            transition: all 0.5s ease-in;
+            border-radius: var(--border-radius);
 
-            .post-title {
-                display: block;
-                margin-bottom: 15px;
-                color: var(--title-light);
-                font-size: 1.2rem;
-                font-weight: 600;
+            .post-text {
+                padding: 2em;
 
-                &:hover {
-                    color: var(--secondary-color);
+                .post-title {
+                    display: block;
+                    margin-bottom: 15px;
+                    color: var(--title-light);
+                    font-size: 1.5rem;
+                    font-weight: 600;
+
+                    &:hover {
+                        color: var(--secondary-color);
+                    }
                 }
-            }
 
-            .post-ecerpt {
+                .post-ecerpt {
 
-                #more {
-                    font-size: 1.3rem;
-                    letter-spacing: 3px;
+                    #more {
+                        letter-spacing: 3px;
+                    }
                 }
-            }
 
-            &:hover {
-                background-color: #2b2b2bf6;
-                background-blend-mode: darken;
+                .post-footer {
+                    margin-top: 30px;
+                    display: flex;
+                    display: -webkit-flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #a7a4a4d0;
+                }
+
             }
         }
     }
@@ -117,6 +125,10 @@ export default {
 @media screen and (min-width: 768px) {
     .Blog {
 
+        .title1 {
+            text-align: left;
+        }
+
         .posts-wrapper {
             flex-direction: row;
             justify-content: space-between;
@@ -124,7 +136,6 @@ export default {
             .post {
                 max-width: 330px;
                 width: 45vw;
-                padding: 4.3vw;
             }
         }
     }
@@ -137,9 +148,8 @@ export default {
 
             .post {
                 max-width: 430px;
-                min-height: 300px;
-                padding: 5vw;
                 display: flex;
+                display: -webkit-flex;
                 flex-direction: column;
                 justify-content: center;
             }

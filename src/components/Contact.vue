@@ -1,5 +1,4 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<!-- eslint-disable vue/valid-template-root -->
 <template>
     <section class="section-wrapper Contact">
         <h3 class="title1">Contact</h3>
@@ -44,8 +43,7 @@ export default {
 
     mounted() {
         gsap.from(".Contact", {
-            scrollTrigger: ".Contact", // start the animation when ".box" enters the viewport (once)
-            // scrub: 1,
+            scrollTrigger: ".Contact",
             delay: .5,
             duration: 1,
             opacity: 0,
@@ -85,8 +83,9 @@ export default {
 .Contact {
     background: url('/images/contact-bg.jpg') center fixed;
     background-size: cover;
-    background-color: #2b2b2b7c;
+    background-color: #0a010eb7;
     background-blend-mode: soft-light;
+    padding-bottom: 20px;
 
     .title1 {
         color: var(--title-light);
@@ -94,7 +93,7 @@ export default {
 
     .form-wrapper {
         width: 100%;
-        background-color: #ffffff5b;
+        background: linear-gradient(to bottom right, #111111, #11111165);
         border-radius: var(--border-radius);
         padding: 1.3em;
         margin: 0 auto;
@@ -119,10 +118,11 @@ export default {
                 border-radius: var(--border-radius);
                 border: 1px solid #2b2b2b1f;
                 margin-bottom: 20px;
-                background-color: #2b2b2b1a;
+                background-color: #b026e213;
                 transition: border-color 0.5s ease;
+                color: var(--title-light);
 
-                &::placeholder {
+                &:placeholder {
                     color: var(--text-dark);
                 }
 
@@ -133,7 +133,7 @@ export default {
 
             button {
                 border: none;
-                background-color: var(--primary-color);
+                background: var(--primary-gradient);
                 color: var(--title-light);
                 cursor: pointer;
                 transition: all 0.5s ease;
@@ -146,7 +146,6 @@ export default {
                     text-decoration: none;
                     border: none;
                     background-color: var(--secondary-color);
-                    color: var(--title-dark);
                 }
             }
         }
@@ -167,7 +166,7 @@ export default {
             #contactForm {
 
                 button {
-                    width: 50vw;
+                    width: 45vw;
                 }
             }
         }
@@ -184,9 +183,10 @@ export default {
             #contactForm {
 
                 button {
-                    width: 30vw;
+                    width: 25vw;
                 }
             }
         }
     }
-}</style>
+}
+</style>

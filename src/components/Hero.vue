@@ -5,7 +5,7 @@
             <h1 class="hero-caption caption">Frontend Developer</h1>
             <p class="para hero-para">
                 Hey, my name is Martin Isonguyo, and I am a frontend developer from Nigeria. It is my conviction that web
-                applications can be more minimal, efficient, and reflective.<br />I am enthusiastic about providing digital
+                applications could be more minimal, efficient, and reflective.<br />I am enthusiastic about providing digital
                 solutions to emerging problems in the maritime industry. <br />I am available to learn, work, connect,
                 build, and grow.
             </p>
@@ -13,9 +13,9 @@
                 <a v-for="(link) in socialLinks" :key="link.name" class="social-link" :href="link.link" :title="link.name">
                     <Icon :icon="link.icon" width="25" />
                 </a>
-                <a class="social-link" href="files/martin-isonguyo-cv.pdf" title="Download CV" download>
+                <!-- <a class="social-link" href="files/martin-isonguyo-cv.pdf" title="Download CV" download>
                     <Icon icon="ph:file-text-light" width="25" />
-                </a>
+                </a> -->
             </div>
             <div class="btn-wrapper">
                 <Button link="#contact" text="Hire me" />
@@ -92,12 +92,12 @@ export default {
 
 <style scoped lang="scss">
 .Hero {
-    background: url('/images/martin-grayscale.png') no-repeat center;
+    // background: url('/images/martin-grayscale.png') no-repeat center;
     background-size: contain;
-    background-color: #1b1b1b;
-    height: 115vh !important;
+    // background-color: #1b1b1b;
+    height: 113vh !important;
     background-blend-mode: soft-light;
-    overflow-y: hidden;
+    overflow: hidden;
 
     .hero-text {
         position: absolute;
@@ -115,14 +115,10 @@ export default {
             font-size: 6vw;
         }
 
-        .hero-para {
-            color: var(--text-light);
-            line-height: 1.6em;
-        }
-
         .socials {
             margin: 40px 0 50px;
             display: flex;
+            display: -webkit-flex;
 
             .social-link {
                 color: var(--title-light);
@@ -175,7 +171,6 @@ export default {
 
 @media screen and (min-width: 768px) {
     .Hero {
-        overflow-x: hidden;
 
         .hero-text {
             width: 70%;

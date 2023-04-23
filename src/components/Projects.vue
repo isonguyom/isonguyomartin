@@ -58,7 +58,6 @@ export default {
 
 <style scoped lang="scss">
 .Projects {
-    background-color: var(--title-dark);
 
     .projects-inner {
 
@@ -68,50 +67,53 @@ export default {
             margin-bottom: 50px;
 
             .title1 {
-                margin-bottom: 10px;
-            }
-
-            .projects-text {
-                color: var(--text-light);
+                margin-bottom: 15px;
             }
         }
 
         .project {
-            display: block;
             max-width: 400px;
             width: 80vw;
+            height: fit-content;
             border-radius: var(--border-radius);
-            padding: 10px;
-            background-color: #ffffff2d;
-            margin-bottom: 40px;
+            padding: 5px;
+            background: #ffec8e27;
             margin: 0 auto 40px;
             overflow: hidden;
             transition: padding 1s ease;
 
             .project-img {
-                border-radius: var(--border-radius) var(--border-radius) 0 0;
+                border-radius: var(--border-radius);
                 display: block;
             }
 
             .project-caption {
                 display: block;
-                background-color: #4e4c4c;
-                color: var(--title-light);
+                background-color: #ffec8edc;
+                color: var(--title-dark);
                 text-align: center;
                 width: 100%;
+                height: 100%;
                 padding: 10px;
-                border-radius: 0 0 var(--border-radius) var(--border-radius);
-                transition: all 0.5s ease;
+                border-radius: var(--border-radius);
+                transition: opacity 1s ease;
                 text-transform: capitalize;
+                position: absolute;
+                top: 0;
+                font-size: 2.5rem;
+                opacity: 0;
 
                 &:hover {
-                    color: var(--secondary-color);
-                    text-decoration: none;
+                    text-decoration: line-through;
                 }
             }
 
             &:hover {
                 padding: 0;
+
+                .project-caption {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -127,8 +129,9 @@ export default {
         .projects-inner {
             width: 100%;
             display: flex;
+            display: -webkit-flex;
             flex-wrap: wrap;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
 
             .projects-header {
                 width: 70%;
@@ -138,6 +141,7 @@ export default {
 
             .project {
                 width: 48%;
+                margin-left: 0;
             }
         }
     }
@@ -148,18 +152,19 @@ export default {
 
         .projects-inner {
             justify-content: space-between;
-            padding-top: 100px;
+            padding-top: 80px;
 
             .projects-header {
                 width: 33%;
                 text-align: left;
-                margin-left: 0;
                 margin-right: 0;
+                margin-left: 0;
                 display: flex;
+                display: -webkit-flex;
                 flex-direction: column;
                 justify-content: center;
                 padding-right: 25px;
-                max-width: 250px;
+                max-width: 350px;
 
                 .title1 {
                     text-align: left;
@@ -168,11 +173,8 @@ export default {
 
             .project {
                 width: 33%;
-                max-width: 300px;
-
-                &:nth-child(3) {
-                    top: -100px;
-                }
+                max-width: 350px;
+                margin-left: 0;
             }
         }
     }

@@ -7,11 +7,14 @@
   --title-font: 'Inknut Antiqua', serif;
   --primary-color: #b126e2;
   --secondary-color: #ffec8e;
-  --text-light: #cecece;
-  --text-dark: #6e6e6e;
+  --text-light: #c0b4c5;
+  --text-dark: #300441;
   --title-light: #f1f1f1;
-  --title-dark: #2b2b2b;
-  --border-radius: 7px;
+  --title-dark: #0a010e;
+  --border-radius: 3px;
+  --box-shadow: 1px 1px 5px #1e08255b;
+  --primary-gradient: linear-gradient(#b126e2, #b026e265);
+  --body-bg-gradient: radial-gradient(#100414, #0a010e, #300441);
 }
 
 *,
@@ -36,16 +39,18 @@ html {
 
 body {
   min-height: 100vh;
-  color: var(--text-dark);
-  transition: color 0.5s, background-color 0.5s;
   font-family: var(--text-font);
   font-weight: 400;
-  font-size: 15px;
+  font-size: 17px;
+  color: var(--text-light);
+  line-height: 1.5em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background: var(--body-bg-gradient);
+  transition: color 0.3s, background-color 0.5s;
 }
 
 h1,
@@ -66,6 +71,7 @@ a {
 
 a:hover {
   color: var(--secondary-color);
+  text-decoration: line-through;
 }
 
 img {
