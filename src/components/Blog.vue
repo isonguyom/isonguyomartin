@@ -34,13 +34,18 @@ export default {
             posts: [
                 {
                     title: 'Article title', link: '', image: 'blog-img1.png',
-                    platform: 'Medium', platformLink: '', date: '2 April 2023',
-                    ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
+                    platform: 'Medium', platformLink: '', date: '2 Apr 2023',
+                    ecerpt: 'Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores'
                 },
                 {
                     title: 'Article title', link: '', image: 'blog-img2.png',
-                    platform: 'Hashnode', platformLink: '', date: '20 March 2023',
-                    ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
+                    platform: 'Hashnode', platformLink: '', date: '20 Mar 2023',
+                    ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates tuos'
+                },
+                {
+                    title: 'Article title', link: '', image: 'blog-img2.png',
+                    platform: 'Marine Insight', platformLink: '', date: '9 Jan 2023',
+                    ecerpt: 'Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
                 },
             ]
         }
@@ -148,6 +153,7 @@ export default {
 
             .post {
                 max-width: 430px;
+                width: 28vw;
                 display: flex;
                 display: -webkit-flex;
                 flex-direction: column;

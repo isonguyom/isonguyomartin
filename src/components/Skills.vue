@@ -171,7 +171,8 @@ export default {
         .tool-icon {
             display: block;
             margin-right: 4px;
-            padding: 6px;
+            padding: 3px;
+            width: 40px;
         }
 
         .tool-caption {

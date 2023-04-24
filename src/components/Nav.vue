@@ -4,12 +4,12 @@
         <div class="hamburger-wrapper" @click="toggleMenu">
             <div class="hamburger" :class="{ active: menuIsActive }" />
         </div>
-        <TransitionGroup tag="ul" class="menu" appear @enter="enter" @after-enter="afterEnter" v-if="menuIsActive">
+        <ul class="menu" v-if="menuIsActive">
             <li class="menu-item" v-for="item in menuItems" :key="item.name" @click="toggleMenu"><router-link
                     :to="{ path: '/', hash: item.hash }">
                     <Icon class="menu-item-icon" :icon="item.icon" width="25" /><span>{{ item.name }}</span>
                 </router-link></li>
-        </TransitionGroup>
+        </ul>
     </nav>
 </template>
 
@@ -32,21 +32,18 @@ export default {
         }
     },
 
+    mounted() {
+        gsap.from('.menu-item', {
+            duration: .7,
+            stagger: .1,
+            x: -50,
+        })
+    },
+
     methods: {
         toggleMenu() {
             this.menuIsActive = !this.menuIsActive
         },
-
-        enter() {
-            gsap.from('.menu-item', {
-                duration: .7,
-                stagger: .1,
-                x: -50,
-            })
-        },
-        afterEnter() {
-            console.log('after enter')
-        }
     }
 }
 </script>

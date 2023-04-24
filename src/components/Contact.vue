@@ -1,18 +1,20 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <section class="section-wrapper Contact">
-        <h3 class="title1">Contact</h3>
+        <h3 class="title1">Contact me</h3>
         <div class="form-wrapper">
             <div ref="feedback" class="feedback">{{ feedbackMessage }}</div>
             <form id="contactForm" @submit.prevent="sendEmail">
-                <input type="text" name="contactName" id="contactName" v-model="contactName" placeholder="Your Name"
-                    required>
-                <input type="email" name="contactEmail" id="contactEmail" v-model="contactEmail" placeholder="Your Email"
-                    required>
-                <input type="text" name="contactSubject" id="contactSubject" v-model="contactSubject" placeholder="Subject"
-                    required>
-                <textarea name="contactMessage" id="contactMessage" v-model="contactMessage" cols="30" rows="10"
-                    placeholder="Your Message" required></textarea>
+                <div class="form-control" v-for="item in inputs" :key="item.id">
+                    <label :for="item.id">{{ item.label }}</label>
+                    <input :type="item.type" :name="item.id" :id="item.id" v-model="item.value"
+                        :placeholder="item.placeholder" required>
+                </div>
+                <div class="form-control">
+                    <label for="contactMessage">Message</label>
+                    <textarea name="contactMessage" id="contactMessage" v-model="contactMessage" cols="30" rows="10"
+                        placeholder="Your Message" required></textarea>
+                </div>
                 <button type="submit">Send Message</button>
             </form>
         </div>
@@ -37,7 +39,12 @@ export default {
             contactName: '',
             contactEmail: '',
             contactSubject: '',
-            contactMessage: ''
+            contactMessage: '',
+            inputs: [
+                { id: 'contactName', type: 'text', label: 'Name', placeholder: 'Your Name' },
+                { id: 'contactEmail', type: 'email', label: 'Email', placeholder: 'Your Email' },
+                { id: 'contactSubject', type: 'text', label: 'Subject', placeholder: 'Subject' },
+            ]
         }
     },
 
@@ -109,6 +116,12 @@ export default {
 
         #contactForm {
             width: 100%;
+
+            label {
+                color: var(--title-light);
+                display: block;
+                margin-bottom: 5px;
+            }
 
             input,
             textarea,
