@@ -3,12 +3,17 @@
     <section class="section-wrapper Hero">
         <div class="hero-text">
             <h1 class="hero-caption caption">Frontend Developer</h1>
-            <p class="para hero-para">
-                Hey, my name is Martin Isonguyo, and I am a frontend developer from Nigeria. It is my conviction that web
-                applications could be more minimal, efficient, and reflective.<br />I am enthusiastic about providing digital
-                solutions to emerging problems in the maritime industry. <br />I am available to learn, work, connect,
-                build, and grow.
-            </p>
+            <div class="para hero-para">
+                <p>
+                    Hey, my name is Martin Isonguyo, and I am a frontend developer from Nigeria. I believe that web
+                    applications could be minimal yet effective and reflective.
+                </p>
+                <p>
+                    My motivation is that of a problem solver who leverages digital tools and skills to solve problems. I am
+                    passionate about developing digital resources and accelerating their adoption in the maritime industry.
+                </p>
+                <p>I am available to learn, work, connect, build, and grow.</p>
+            </div>
             <div class="socials">
                 <a v-for="(link) in socialLinks" :key="link.name" class="social-link" :href="link.link" :title="link.name">
                     <Icon :icon="link.icon" width="25" />
@@ -115,6 +120,13 @@ export default {
             font-size: 6vw;
         }
 
+        .hero-para {
+
+            p {
+                margin-bottom: 8px;
+            }
+        }
+
         .socials {
             margin: 40px 0 50px;
             display: flex;
@@ -180,7 +192,7 @@ export default {
             }
 
             .hero-para {
-                line-height: 1.8em;
+                line-height: 1.4em;
             }
         }
 

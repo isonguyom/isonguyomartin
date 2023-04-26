@@ -35,9 +35,9 @@ export default {
     data() {
         return {
             skills: [
-                { title: 'Frontend Development', icon: 'iconoir:dev-mode-laptop', activeBg: true, text: 'Amazing websites are simple and clean. Minimalism is the concept, and minimalism is my concept.' },
-                { title: 'Wordpress', icon: 'arcticons:wordpress', activeBg: false, text: 'Wordpress is the most popular CMS-based website platform. I build good and efficient wordpress websites.' },
-                { title: 'UI/UX Design', icon: 'solar:window-frame-outline', activeBg: false, text: 'Although each product is unique, a good design offers it meaning and efficiently communicates with the user.' }
+                { title: 'Frontend Development', icon: 'iconoir:dev-mode-laptop', activeBg: true, text: 'I build amazing responsive websites using a mobile-first approach while following best practices. My core frontend tools are HTML, CSS, JavaScript, and VueJS.' },
+                { title: 'Wordpress', icon: 'arcticons:wordpress', activeBg: false, text: 'WordPress is a powerful CMS platform that accounts for over 43.2% of all websites. It is rich in plugins, which makes it ideal for your next website.' },
+                { title: 'Design', icon: 'fluent:design-ideas-16-regular', activeBg: false, text: 'I consider a design\'s ability to effectively communicate in its simplest and cleanest form significant. I may not be your regular GUI designer, but yeah! I can do a job.' }
             ],
 
             tools: [

@@ -7,7 +7,7 @@
   --title-font: 'Inknut Antiqua', serif;
   --primary-color: #b126e2;
   --secondary-color: #ffec8e;
-  --text-light: #c0b4c5;
+  --text-light: #ccc6ce;
   --text-dark: #300441;
   --title-light: #f1f1f1;
   --title-dark: #0a010e;
@@ -43,7 +43,7 @@ body {
   font-weight: 400;
   font-size: 17px;
   color: var(--text-light);
-  line-height: 1.5em;
+  line-height: 1.4em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
