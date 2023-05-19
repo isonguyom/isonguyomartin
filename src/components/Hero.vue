@@ -97,7 +97,7 @@ export default {
 
 <style scoped lang="scss">
 .Hero {
-    // background: url('/images/martin.png') no-repeat center;
+    background: url('/images/martin.png') no-repeat center;
     background-size: contain;
     background-color: #0a010ed5;
     height: 113vh !important;
