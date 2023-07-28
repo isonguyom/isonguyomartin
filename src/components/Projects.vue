@@ -32,7 +32,7 @@ export default {
     data() {
         return {
             projects: [
-                { name: 'Projectrum', caption: 'Projectrum project manager', image: 'img-projectrum', link: 'https://projectrum.netlify.app/#/' },
+                { name: 'Vue Calculator', caption: 'Vue calculator', image: 'img-vue-calculator', link: 'https://iso-vue-calculator.netlify.app/' },
                 { name: 'Tiptop', caption: 'Tiptop design agency website', image: 'img-tiptop', link: 'https://tiptopdesign.netlify.app/' },
                 { name: 'World Citizen', caption: 'World citizen website', image: 'img-world-citizen', link: 'https://worldcitizendotorg.netlify.app/' },
                 { name: 'Quiz App', caption: 'JavaScript Quiz App', image: 'img-js-quiz-app', link: 'https://isonguyom.github.io/quizAppJs/' },

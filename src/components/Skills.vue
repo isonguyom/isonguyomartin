@@ -43,16 +43,16 @@ export default {
             tools: [
                 { caption: 'Vuejs', icon: 'icon-vuejs' },
                 { caption: 'JavaScript', icon: 'icon-javascript' },
-                { caption: 'HTML', icon: 'icon-html' },
-                { caption: 'CSS', icon: 'icon-css' },
+                { caption: 'HTML/CSS', icon: 'icon-html' },
                 { caption: 'Bootstrap', icon: 'icon-bootstrap' },
                 { caption: 'SCSS', icon: 'icon-scss' },
-                { caption: 'jQuery', icon: 'icon-jquery' },
+                { caption: 'Nodejs/Expressjs', icon: 'icon-nodejs' },
+                { caption: 'Mongodb', icon: 'icon-mongodb' },
                 { caption: 'Figma', icon: 'icon-figma' },
                 { caption: 'Python', icon: 'icon-python' },
                 { caption: 'C++', icon: 'icon-cpp' },
                 { caption: 'GSAP', icon: 'icon-gsap' },
-                { caption: 'Github', icon: 'icon-github' }
+                { caption: 'Github/Git', icon: 'icon-github' }
             ]
         }
     },
