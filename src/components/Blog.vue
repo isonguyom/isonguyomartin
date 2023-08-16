@@ -33,19 +33,19 @@ export default {
         return {
             posts: [
                 {
-                    title: 'Article title', link: '', image: 'blog-img1.png',
-                    platform: 'Medium', platformLink: '', date: '2 Apr 2023',
-                    ecerpt: 'Incidunt accusamus cumque voluptates dolorem. Eos natus, excepturi eum vel minus asperiores'
+                    title: 'HOW TO BUILD A MEVN APP WITH VITE FRONTEND (PART 1)', link: 'https://dev.to/isonguyom/mevn-257p', image: 'mevn-vite_cover.png',
+                    platform: 'dev.to', platformLink: 'https://dev.to/isonguyom', date: '7 Aug 2023',
+                    ecerpt: 'Full-stack web development describes the process of building the frontend and backend of a web application'
                 },
                 {
-                    title: 'Article title', link: '', image: 'blog-img2.png',
-                    platform: 'Hashnode', platformLink: '', date: '20 Mar 2023',
-                    ecerpt: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus cumque voluptates tuos'
+                    title: 'HOW TO BUILD A MEVN APP WITH VITE FRONTEND (PART 2)', link: '', image: 'mevn-vite_cover.png',
+                    platform: 'dev.to', platformLink: 'https://dev.to/isonguyom', date: '16 Aug 2023',
+                    ecerpt: 'We want our applications to interact with each other and for our frontend to be accessible only through'
                 },
                 {
-                    title: 'Article title', link: '', image: 'blog-img2.png',
-                    platform: 'Marine Insight', platformLink: '', date: '9 Jan 2023',
-                    ecerpt: 'Eos natus, excepturi eum vel minus asperiores itaque consectetur esse alias sed labore rem at mollitia perferendis'
+                    title: 'HOW TO BUILD A MEVN APP WITH VITE FRONTEND (PART 3)', link: '', image: 'mevn-vite_cover.png',
+                    platform: 'dev.to', platformLink: 'https://dev.to/isonguyom', date: '17 Aug 2023',
+                    ecerpt: 'Congratulations! You have successfully developed your MEVN CRUD application'
                 },
             ]
         }
