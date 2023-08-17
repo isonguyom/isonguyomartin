@@ -2,7 +2,7 @@
 <template>
     <section class="container section-wrapper">
         <div class="Skills">
-            <h3 class="title1">How i can serve you</h3>
+            <h3 class="title1">Specializations</h3>
             <div class="skills-wrapper">
                 <div class="skill" :class="{ primaryBg: skill.activeBg }" v-for="skill in skills" :key="skill.title">
                     <div class="skill-header">
@@ -14,12 +14,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="Tools">
-      <div class="tool" v-for="tool in tools" :key="tool.caption">
-        <img class="tool-icon" :src="`images/${tool.icon}.svg`" :alt="tool.caption" />
-        <p class="tool-caption">{{ tool.caption }}</p>
-      </div>
-    </div> -->
     </section>
 </template>
 
@@ -63,7 +57,7 @@ export default {
                     text: "I consider a design's ability to effectively communicate in its simplest and cleanest form significant. I may not be your regular GUI designer, but yeah! I can do a job.",
                     tools: 'Hadoop, Hive, Spark, MS Excel, MongoDB'
                 }
-            ],
+            ]
         }
     },
 
@@ -85,7 +79,6 @@ export default {
         //   y: -100,
         //   opacity: 0
         // })
-
         // gsap.from('.tool', {
         //   scrollTrigger: '.Tools',
         //   delay: 0.5,
@@ -104,19 +97,17 @@ export default {
 }
 
 .Skills {
-    font-size: 1.3rem;
-    line-height: 30px;
-
     .skills-wrapper {
         display: flex;
         display: -webkit-flex;
         flex-direction: column;
         align-items: center;
+        font-size: 1.3rem;
 
         .skill {
-            width: 80vw;
+            width: 90vw;
             margin-bottom: 40px;
-            padding: 40px 3%;
+            padding: 40px 5%;
 
             .skill-header {
                 display: flex;
@@ -131,6 +122,7 @@ export default {
                 .skill-title {
                     line-height: 1.2em;
                     margin-left: 10px;
+                    text-transform: uppercase;
                 }
             }
 
@@ -149,9 +141,12 @@ export default {
     }
 }
 
-
 @media screen and (min-width: 768px) {
     .Skills {
+        .title1 {
+            text-align: left;
+        }
+
         .skills-wrapper {
             flex-direction: row;
             justify-content: center;
@@ -167,18 +162,9 @@ export default {
 
 @media screen and (min-width: 992px) {
     .Skills {
-        font-size: 2rem;
-        line-height: 55px;
-
-        .title1 {
-            margin-bottom: 35px;
-        }
 
         .skills-wrapper {
-            flex-direction: row;
-            justify-content: center;
-            align-items: normal;
-
+            font-size: 1.5rem;
         }
     }
 }
