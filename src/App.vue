@@ -2,7 +2,7 @@
 import { RouterView } from 'vue-router'
 import { reactive } from "vue";
 import Loader from './components/Loader.vue';
-import Nav from './components/Nav.vue';
+// import Nav from './components/Nav.vue';
 
 
 
@@ -15,7 +15,7 @@ const state = reactive({ isLoading: false });
       <Loader />
     </div>
     <div v-else>
-      <Nav />
+      <!-- <Nav /> -->
       <RouterView />
     </div>
   </div>

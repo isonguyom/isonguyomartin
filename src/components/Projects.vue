@@ -1,16 +1,17 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <section class="section-wrapper Projects">
-
         <div class="projects-inner">
             <div class="projects-header">
                 <h3 class="title1">My projects</h3>
-                <p class="projects-text">Through the course of my learning, I am proud to have built and contributed to
-                    these projects.</p>
+                <p class="projects-text">
+                    Through the course of my learning, I am proud to have built and contributed to these
+                    projects.
+                </p>
             </div>
 
             <div class="project" v-for="project in projects" :key="project.name">
-                <img class="project-img" :src="`images/${project.image}.png`" :alt="project.name">
+                <img class="project-img" :src="`images/${project.image}.png`" :alt="project.name" />
                 <a :href="project.link" class="project-caption">{{ project.caption }}</a>
             </div>
         </div>
@@ -20,11 +21,11 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger);
-import Button from './Button.vue';
+gsap.registerPlugin(ScrollTrigger)
+import Button from './Button.vue'
 
 export default {
     // eslint-disable-next-line vue/no-reserved-component-names
@@ -32,39 +33,66 @@ export default {
     data() {
         return {
             projects: [
-                { name: 'Vue Calculator', caption: 'Vue calculator', image: 'img-vue-calculator', link: 'https://iso-vue-calculator.netlify.app/' },
-                { name: 'Tiptop', caption: 'Tiptop design agency website', image: 'img-tiptop', link: 'https://tiptopdesign.netlify.app/' },
-                { name: 'World Citizen', caption: 'World citizen website', image: 'img-world-citizen', link: 'https://worldcitizendotorg.netlify.app/' },
-                { name: 'Quiz App', caption: 'JavaScript Quiz App', image: 'img-js-quiz-app', link: 'https://isonguyom.github.io/quizAppJs/' },
-                { name: 'Countdown Timer', caption: 'Vuejs countdown timer', image: 'img-countdown-timer', link: 'https://isonguyom.github.io/countdown-timer/' }
+                {
+                    name: 'Vue Calculator',
+                    caption: 'Vue calculator',
+                    image: 'img-vue-calculator',
+                    link: 'https://iso-vue-calculator.netlify.app/'
+                },
+                {
+                    name: 'Tiptop',
+                    caption: 'Tiptop design agency website',
+                    image: 'img-tiptop',
+                    link: 'https://tiptopdesign.netlify.app/'
+                },
+                {
+                    name: 'World Citizen',
+                    caption: 'World citizen website',
+                    image: 'img-world-citizen',
+                    link: 'https://worldcitizendotorg.netlify.app/'
+                },
+                {
+                    name: 'Quiz App',
+                    caption: 'JavaScript Quiz App',
+                    image: 'img-js-quiz-app',
+                    link: 'https://isonguyom.github.io/quizAppJs/'
+                },
+                {
+                    name: 'Countdown Timer',
+                    caption: 'Vuejs countdown timer',
+                    image: 'img-countdown-timer',
+                    link: 'https://isonguyom.github.io/countdown-timer/'
+                }
             ]
         }
     },
 
     mounted() {
-        gsap.from(".project img", {
-            scrollTrigger: ".project", // start the animation when ".box" enters the viewport (once)
-            // scrub: 1,
-            delay: .5,
-            duration: 1,
-            ease: 'bounce.out',
-            y: -100,
-            opacity: 0,
-            stagger: .2
-        });
+        // gsap.from(".project img", {
+        //     scrollTrigger: ".project", // start the animation when ".box" enters the viewport (once)
+        //     // scrub: 1,
+        //     delay: .5,
+        //     duration: 1,
+        //     ease: 'bounce.out',
+        //     y: -100,
+        //     opacity: 0,
+        //     stagger: .2
+        // });
     }
 }
 </script>
 
 <style scoped lang="scss">
 .Projects {
+    padding: 6em 0;
+    font-size: 1.3rem;
+    line-height: 30px;
 
     .projects-inner {
-
         .projects-header {
-            width: 100%;
+            width: 80vw;
             text-align: center;
-            margin-bottom: 50px;
+            margin: 0 auto 50px;
 
             .title1 {
                 margin-bottom: 15px;
@@ -72,8 +100,6 @@ export default {
         }
 
         .project {
-            max-width: 400px;
-            width: 80vw;
             height: fit-content;
             border-radius: var(--border-radius);
             padding: 5px;
@@ -125,7 +151,6 @@ export default {
 
 @media screen and (min-width: 768px) {
     .Projects {
-
         .projects-inner {
             width: 100%;
             display: flex;
@@ -140,7 +165,7 @@ export default {
             }
 
             .project {
-                width: 48%;
+                width: 50%;
                 margin-left: 0;
             }
         }
@@ -149,33 +174,12 @@ export default {
 
 @media screen and (min-width: 992px) {
     .Projects {
+        font-size: 2rem;
+        line-height: 55px;
 
         .projects-inner {
             justify-content: space-between;
             padding-top: 80px;
-
-            .projects-header {
-                width: 33%;
-                text-align: left;
-                margin-right: 0;
-                margin-left: 0;
-                display: flex;
-                display: -webkit-flex;
-                flex-direction: column;
-                justify-content: center;
-                padding-right: 25px;
-                max-width: 350px;
-
-                .title1 {
-                    text-align: left;
-                }
-            }
-
-            .project {
-                width: 33%;
-                max-width: 350px;
-                margin-left: 0;
-            }
         }
     }
 }

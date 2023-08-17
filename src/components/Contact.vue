@@ -90,9 +90,10 @@ export default {
 .Contact {
     background: url('/images/contact-bg.jpg') center fixed;
     background-size: cover;
-    background-color: #0a010eb7;
+    background-color: #0a010e85;
     background-blend-mode: soft-light;
     padding-bottom: 20px;
+    font-size: 1.3rem;
 
     .title1 {
         color: var(--title-light);
@@ -189,7 +190,7 @@ export default {
 
 @media screen and (min-width: 992px) {
     .Contact {
-
+font-size: 1.5rem;
         .form-wrapper {
             width: 60%;
 
