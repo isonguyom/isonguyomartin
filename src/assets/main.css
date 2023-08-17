@@ -25,6 +25,7 @@
   margin: 0;
   padding: 0;
   position: relative;
+  font-weight: normal;
 }
 
 *:focus {
@@ -41,17 +42,13 @@ body {
   min-height: 100vh;
   font-family: var(--text-font);
   font-weight: 400;
-  font-size: 15px;
-  /* color: var(--text-light); */
-  line-height: 1.4em;
-  /* text-rendering: optimizeLegibility;
+  font-size: 17px;
+  line-height: 1.8em;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  /* overflow-x: hidden; */
   font-family: 'Bricolage Grotesque', sans-serif;
-  /* background: var(--body-bg-gradient); */
-  /* transition: color 0.3s, background-color 0.5s; */
 }
 
 h1,
@@ -81,7 +78,7 @@ img {
 
 .section-wrapper {
   min-height: 100vh;
-  padding: 6em 5%;
+  padding: 6em 5.5%;
 }
 
 .title1 {
