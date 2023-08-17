@@ -24,17 +24,18 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 *:focus {
   outline: 2px solid var(--secondary-color);
 }
 
-/* html {
+html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   font-size: 100%;
-} */
+}
 
 body {
   min-height: 100vh;
