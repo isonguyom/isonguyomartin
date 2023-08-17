@@ -84,7 +84,7 @@ export default {
 
 <style scoped lang="scss">
 .Projects {
-    padding: 6em 0;
+    padding: 4em 0;
     font-size: 1.3rem;
     line-height: 30px;
 
@@ -92,10 +92,10 @@ export default {
         .projects-header {
             width: 80vw;
             text-align: center;
-            margin: 0 auto 50px;
+            margin: 0 auto 35px;
 
             .title1 {
-                margin-bottom: 15px;
+                margin-bottom: 10px;
             }
         }
 
@@ -104,7 +104,6 @@ export default {
             border-radius: var(--border-radius);
             padding: 5px;
             background: #ffec8e27;
-            margin: 0 auto 40px;
             overflow: hidden;
             transition: padding 1s ease;
 
@@ -156,10 +155,10 @@ export default {
             display: flex;
             display: -webkit-flex;
             flex-wrap: wrap;
-            margin-bottom: 60px;
+            // margin-bottom: 60px;
 
             .projects-header {
-                width: 70%;
+                width: 60%;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -174,8 +173,8 @@ export default {
 
 @media screen and (min-width: 992px) {
     .Projects {
-        font-size: 2rem;
-        line-height: 55px;
+        font-size: 1.4rem;
+        // line-height: 55px;
 
         .projects-inner {
             justify-content: space-between;
