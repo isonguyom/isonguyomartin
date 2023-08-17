@@ -10,7 +10,7 @@
                         <h4 class="skill-title">{{ skill.title }}</h4>
                     </div>
                     <p class="skill-text">{{ skill.text }}</p>
-                    <!-- <p>Tools: <span v-for="(tool, i) in skill.tools" :key="i">{{ tool }}</span></p> -->
+                    <p>Tools: {{ skill.tools }}</p>
                 </div>
             </div>
         </div>
@@ -40,21 +40,28 @@ export default {
                     icon: 'iconoir:dev-mode-laptop',
                     activeBg: true,
                     text: 'I build amazing responsive websites using a mobile-first approach while following best practices. My core frontend tools are HTML, CSS, JavaScript, and VueJS.',
-                    tools: ['HTML/CSS', "JavaScript", "Vuejs", "Node.js", "Express.js", "MongoDB", "SCSS", "Bootstrap", "Figma"]
+                    tools: 'HTML/CSS, JavaScript, Vuejs, Node.js, Express.js, MongoDB, SCSS, Bootstrap, Figma'
                 },
                 {
                     title: 'Big Data',
                     icon: 'arcticons:wordpress',
                     activeBg: false,
                     text: 'WordPress is a powerful CMS platform that accounts for over 43.2% of all websites. It is rich in plugins, which makes it ideal for your next website.',
-                    tools: ['Hadoop', "Hive", "Spark", "MS Excel", "MongoDB"]
+                    tools: 'Hadoop, Hive, Spark, MS Excel, MongoDB'
+                },
+                {
+                    title: 'Design',
+                    icon: 'fluent:design-ideas-16-regular',
+                    activeBg: false,
+                    text: "I consider a design's ability to effectively communicate in its simplest and cleanest form significant. I may not be your regular GUI designer, but yeah! I can do a job.",
+                    tools: 'Figma, Corel Draw'
                 },
                 {
                     title: 'Maritime',
                     icon: 'fluent:design-ideas-16-regular',
                     activeBg: false,
                     text: "I consider a design's ability to effectively communicate in its simplest and cleanest form significant. I may not be your regular GUI designer, but yeah! I can do a job.",
-                    tools: ['Hadoop', "Hive", "Spark", "MS Excel", "MongoDB"]
+                    tools: 'Hadoop, Hive, Spark, MS Excel, MongoDB'
                 }
             ],
         }
@@ -172,9 +179,6 @@ export default {
             justify-content: center;
             align-items: normal;
 
-            .skill {
-                width: 33.3%;
-            }
         }
     }
 }

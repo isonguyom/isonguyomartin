@@ -1,4 +1,82 @@
-@import './base.css';
+/* color palette from <https://github.com/vuejs/theme> */
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@500;600;700;800;900&family=Signika+Negative:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap');
+
+/* semantic variables for this project */
+:root {
+  --text-font: 'Signika Negative', sans-serif;
+  --title-font: 'Inknut Antiqua', serif;
+  --primary-color: rgb(102, 32, 102);
+  --secondary-color: #ffec8e;
+  --text-light: #ccc6ce;
+  --text-dark: #300441;
+  --title-light: #f1f1f1;
+  --title-dark: #0a010e;
+  --border-radius: 3px;
+  --box-shadow: 1px 1px 5px #1e08255b;
+  --primary-gradient: linear-gradient(#b126e2, #b026e265);
+  --body-bg-gradient: radial-gradient(#100414, #0a010e, #300441);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: 2px solid var(--secondary-color);
+}
+
+/* html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 100%;
+} */
+
+body {
+  min-height: 100vh;
+  font-family: var(--text-font);
+  font-weight: 400;
+  font-size: 15px;
+  /* color: var(--text-light); */
+  line-height: 1.4em;
+  /* text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  scroll-behavior: smooth;
+  /* overflow-x: hidden; */
+  font-family: 'Bricolage Grotesque', sans-serif;
+  /* background: var(--body-bg-gradient); */
+  /* transition: color 0.3s, background-color 0.5s; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* font-family: var(--title-font); */
+  font-weight: 800;
+}
+
+a {
+  text-decoration: none;
+  color: var(--title-light);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: line-through;
+}
+
+img {
+  max-width: 100%;
+}
 
 .section-wrapper {
   min-height: 100vh;

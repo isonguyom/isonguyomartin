@@ -19,7 +19,7 @@ export default {
     background: var(--primary-gradient);
     color: var(--title-light);
     max-width: 100%;
-    padding: 0.7em;
+    padding: 0.2em;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     width: 70vw;
