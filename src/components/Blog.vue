@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <section class="section-wrapper Blog">
-        <h3 class="title1">I can also write</h3>
+        <h3 class="title1">Blog</h3>
         <div class="posts-wrapper">
             <div class="post" v-for="post in posts" :key="post.title">
                 <img class="post-img" :src="`images/${post.image}`" :alt="post.title" />
@@ -40,7 +40,7 @@ export default {
                     platformLink: 'https://dev.to/isonguyom',
                     date: '7 Aug 2023',
                     ecerpt:
-                        'Full-stack web development describes the process of building the frontend and backend of a web application'
+                        'Full-stack web development describes the process of building the frontend and backend'
                 },
                 {
                     title: 'HOW TO BUILD A MEVN APP WITH VITE FRONTEND (PART 2)',
@@ -50,11 +50,11 @@ export default {
                     platformLink: 'https://dev.to/isonguyom',
                     date: '16 Aug 2023',
                     ecerpt:
-                        'We want our applications to interact with each other and for our frontend to be accessible only through'
+                        'We want our applications to interact with each other and for our frontend to be accessible'
                 },
                 {
                     title: 'HOW TO BUILD A MEVN APP WITH VITE FRONTEND (PART 3)',
-                    link: '',
+                    link: 'https://dev.to/isonguyom/how-to-build-a-mevn-app-with-vite-frontend-part-2-2lh8',
                     image: 'mevn-vite_cover.png',
                     platform: 'dev.to',
                     platformLink: 'https://dev.to/isonguyom',
@@ -82,9 +82,7 @@ export default {
 <style scoped lang="scss">
 .Blog {
     min-height: fit-content;
-    font-size: 1.3rem;
-    line-height: 30px;
-
+    
     .posts-wrapper {
         margin: 35px 0;
         display: flex;
@@ -96,19 +94,26 @@ export default {
             max-width: 400px;
             width: 80vw;
             height: fit-content;
-            background: var(--primary-color);
+            /* background: var(--primary-color); */
             margin-bottom: 30px;
             border-radius: var(--border-radius);
+            border: 1px solid rgb(221, 220, 220);
             transition: all 0.5s ease-in;
+font-size: 1.2rem;
 
+.post-img {
+    height: 250px;
+}
             .post-text {
                 padding: 1em;
+                /* color: var(--text-light); */
 
                 .post-title {
                     display: block;
-                    margin-bottom: 15px;
-                    color: var(--title-light);
+                    margin-bottom: 10px;
+                    color: var(--title-dark);
                     font-weight: 600;
+                    text-transform: uppercase;
 
                     &:hover {
                         color: var(--secondary-color);
@@ -127,7 +132,11 @@ export default {
                     display: -webkit-flex;
                     justify-content: space-between;
                     align-items: center;
-                    color: #a7a4a4d0;
+                    color: #a7a4a4;
+
+                    a {
+                    color: #a7a4a4;
+                    }
                 }
             }
         }
@@ -141,10 +150,15 @@ export default {
 
 @media screen and (min-width: 768px) {
     .Blog {
+
+        .title1 {
+            text-align: left;
+        }
         .posts-wrapper {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
+            align-items: normal;
 
             .post {
                 max-width: 45%;
@@ -156,12 +170,6 @@ export default {
 
 @media screen and (min-width: 992px) {
     .Blog {
-        font-size: 1.5rem;
-        line-height: 35px;
-
-        .title1 {
-            font-size: 2rem;
-        }
 
         .posts-wrapper {
             .post {

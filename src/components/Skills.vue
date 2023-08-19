@@ -4,13 +4,13 @@
         <div class="Skills">
             <h3 class="title1">Specializations</h3>
             <div class="skills-wrapper">
-                <div class="skill" :class="{ primaryBg: skill.activeBg }" v-for="skill in skills" :key="skill.title">
+                <div class="skill" :class="skill.class" v-for="skill in skills" :key="skill.title">
                     <div class="skill-header">
                         <Icon class="icon" :icon="skill.icon" width="80" stroke-width="2" />
                         <h4 class="skill-title">{{ skill.title }}</h4>
                     </div>
                     <p class="skill-text">{{ skill.text }}</p>
-                    <p>Tools: {{ skill.tools }}</p>
+                    <p class="tools"><b>Tools:</b> {{ skill.tools }}</p>
                 </div>
             </div>
         </div>
@@ -31,31 +31,31 @@ export default {
             skills: [
                 {
                     title: 'Web Development',
+                    class: 'web',
                     icon: 'iconoir:dev-mode-laptop',
-                    activeBg: true,
-                    text: 'I build amazing responsive websites using a mobile-first approach while following best practices. My core frontend tools are HTML, CSS, JavaScript, and VueJS.',
-                    tools: 'HTML/CSS, JavaScript, Vuejs, Node.js, Express.js, MongoDB, SCSS, Bootstrap, Figma'
+                    text: 'With a solid foundation in HTML, CSS, and JavaScript, I am capable of building user-friendly interfaces that deliver exceptional user experiences.',
+                    tools: 'HTML/CSS, JavaScript, Vuejs, Node.js, Express.js, MongoDB, SCSS, Bootstrap, Git/Github, Wordpress'
                 },
                 {
                     title: 'Big Data',
-                    icon: 'arcticons:wordpress',
-                    activeBg: false,
-                    text: 'WordPress is a powerful CMS platform that accounts for over 43.2% of all websites. It is rich in plugins, which makes it ideal for your next website.',
-                    tools: 'Hadoop, Hive, Spark, MS Excel, MongoDB'
+                    class: 'data',
+                    icon: 'eos-icons:big-data-outlined',
+                    text: 'I extract, analyse, and make sense of large and complex data sets and leverage them to solve problems, drive innovation, and make data-driven decisions.',
+                    tools: 'Python, Hadoop, Hive, Spark, SQL, MS Excel, MongoDB, '
                 },
                 {
                     title: 'Design',
+                    class: 'design',
                     icon: 'fluent:design-ideas-16-regular',
-                    activeBg: false,
                     text: "I consider a design's ability to effectively communicate in its simplest and cleanest form significant. I may not be your regular GUI designer, but yeah! I can do a job.",
-                    tools: 'Figma, Corel Draw'
+                    tools: 'Figma, Corel Draw, Inkscape'
                 },
                 {
-                    title: 'Maritime',
-                    icon: 'fluent:design-ideas-16-regular',
-                    activeBg: false,
-                    text: "I consider a design's ability to effectively communicate in its simplest and cleanest form significant. I may not be your regular GUI designer, but yeah! I can do a job.",
-                    tools: 'Hadoop, Hive, Spark, MS Excel, MongoDB'
+                    title: 'Marine-tech',
+                    class: 'marine',
+                    icon: 'ri:ship-line',
+                    text: "My academic background in marine engineering, coupled with my tech skills, has fueled an enthusiasm for providing digital solutions to challenges in the maritime industry. Embarking on a marine-tech project: I am glad to be on the team.",
+                    tools: 'C++, Google Drive'
                 }
             ]
         }
@@ -102,12 +102,12 @@ export default {
         display: -webkit-flex;
         flex-direction: column;
         align-items: center;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
 
         .skill {
             width: 90vw;
-            margin-bottom: 40px;
-            padding: 40px 5%;
+            padding: 30px 5%;
+            color: var(--text-light);
 
             .skill-header {
                 display: flex;
@@ -116,26 +116,40 @@ export default {
                 margin-bottom: 20px;
 
                 .icon {
-                    color: var(--primary-color);
+                    color: var(--title-light);
                 }
 
                 .skill-title {
-                    line-height: 1.2em;
-                    margin-left: 10px;
+                    font-size: 1.4rem;
+                    margin-left: 15px;
                     text-transform: uppercase;
                 }
             }
 
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-            &.primaryBg {
+            &.web {
                 background: var(--primary-color);
 
+            }
+
+            &.data {
+                background-color: var(--secondary-color);
+                color: var(--text-dark);
+
                 .icon {
-                    color: var(--secondary-color);
+                    color: var(--text-dark);
                 }
+            }
+
+            &.design {
+                background-color: teal;
+            }
+
+            &.marine {
+                background-color: #01386a;
+            }
+
+            .tools {
+                margin-top: 40px;
             }
         }
     }
@@ -155,16 +169,8 @@ export default {
 
             .skill {
                 width: 50%;
+                margin-bottom: 0;
             }
-        }
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .Skills {
-
-        .skills-wrapper {
-            font-size: 1.4rem;
         }
     }
 }

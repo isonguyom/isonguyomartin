@@ -93,13 +93,14 @@ export default {
     background-color: #0a010e85;
     background-blend-mode: soft-light;
     padding-bottom: 20px;
-    font-size: 1.3rem;
+
 
     .title1 {
         color: var(--title-light);
     }
 
     .form-wrapper {
+        font-size: 1.2rem;
         width: 100%;
         background: linear-gradient(to bottom right, #111111, #11111165);
         border-radius: var(--border-radius);
@@ -190,9 +191,10 @@ export default {
 
 @media screen and (min-width: 992px) {
     .Contact {
-font-size: 1.5rem;
+
         .form-wrapper {
             width: 60%;
+            font-size: 1.3rem;
 
             #contactForm {
 

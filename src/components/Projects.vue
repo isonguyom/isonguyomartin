@@ -3,7 +3,7 @@
     <section class="section-wrapper Projects">
         <div class="projects-inner">
             <div class="projects-header">
-                <h3 class="title1">My projects</h3>
+                <h3 class="title1">Portfolio</h3>
                 <p class="projects-text">
                     Through the course of my learning, I am proud to have built and contributed to these
                     projects.
@@ -85,7 +85,7 @@ export default {
 <style scoped lang="scss">
 .Projects {
     padding: 4em 0;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 30px;
 
     .projects-inner {
@@ -173,12 +173,16 @@ export default {
 
 @media screen and (min-width: 992px) {
     .Projects {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         // line-height: 55px;
 
         .projects-inner {
             justify-content: space-between;
             padding-top: 80px;
+
+            .projects-header {
+                width: 50%;
+            }
         }
     }
 }

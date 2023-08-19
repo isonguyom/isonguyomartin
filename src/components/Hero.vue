@@ -52,7 +52,9 @@ export default {
         }
     },
 
+
     mounted() {
+        // console.log(hero)
         // var tl = gsap.timeline({
         //   scrollTrigger: {
         //     trigger: '.Hero'
