@@ -82,7 +82,7 @@ export default {
 <style scoped lang="scss">
 .Blog {
     min-height: fit-content;
-    
+
     .posts-wrapper {
         margin: 35px 0;
         display: flex;
@@ -94,24 +94,24 @@ export default {
             max-width: 400px;
             width: 80vw;
             height: fit-content;
-            /* background: var(--primary-color); */
+            background: var(--primary-color);
             margin-bottom: 30px;
             border-radius: var(--border-radius);
             border: 1px solid rgb(221, 220, 220);
             transition: all 0.5s ease-in;
-font-size: 1.2rem;
 
-.post-img {
-    height: 250px;
-}
+            .post-img {
+                height: 250px;
+            }
+
             .post-text {
                 padding: 1em;
-                /* color: var(--text-light); */
+                color: var(--text-light);
 
                 .post-title {
                     display: block;
                     margin-bottom: 10px;
-                    color: var(--title-dark);
+                    color: var(--title-light);
                     font-weight: 600;
                     text-transform: uppercase;
 
@@ -135,7 +135,7 @@ font-size: 1.2rem;
                     color: #a7a4a4;
 
                     a {
-                    color: #a7a4a4;
+                        color: #a7a4a4;
                     }
                 }
             }
@@ -154,6 +154,7 @@ font-size: 1.2rem;
         .title1 {
             text-align: left;
         }
+
         .posts-wrapper {
             flex-direction: row;
             justify-content: space-between;

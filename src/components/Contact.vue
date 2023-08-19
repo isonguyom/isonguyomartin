@@ -104,7 +104,7 @@ export default {
         width: 100%;
         background: linear-gradient(to bottom right, #111111, #11111165);
         border-radius: var(--border-radius);
-        padding: 1.3em;
+        padding: 1em;
         margin: 0 auto;
 
         .feedback {
@@ -194,7 +194,6 @@ export default {
 
         .form-wrapper {
             width: 60%;
-            font-size: 1.3rem;
 
             #contactForm {
 

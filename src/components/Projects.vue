@@ -1,18 +1,19 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <section class="section-wrapper Projects">
-        <div class="projects-inner">
-            <div class="projects-header">
-                <h3 class="title1">Portfolio</h3>
-                <p class="projects-text">
-                    Through the course of my learning, I am proud to have built and contributed to these
-                    projects.
-                </p>
-            </div>
-
-            <div class="project" v-for="project in projects" :key="project.name">
-                <img class="project-img" :src="`images/${project.image}.png`" :alt="project.name" />
-                <a :href="project.link" class="project-caption">{{ project.caption }}</a>
+        <div class="projects-header">
+            <h3 class="title1">Portfolio</h3>
+            <p class="projects-text">
+                Through the course of my learning, I am proud to have built and contributed to these
+                projects.
+            </p>
+        </div>
+        <div>
+            <div class="projects-inner">
+                <div class="project" v-for="project in projects" :key="project.name">
+                    <img class="project-img" :src="`images/${project.image}.png`" :alt="project.name" />
+                    <a :href="project.link" class="project-caption">{{ project.caption }}</a>
+                </div>
             </div>
         </div>
 
@@ -33,18 +34,6 @@ export default {
     data() {
         return {
             projects: [
-                {
-                    name: 'Vue Calculator',
-                    caption: 'Vue calculator',
-                    image: 'img-vue-calculator',
-                    link: 'https://iso-vue-calculator.netlify.app/'
-                },
-                {
-                    name: 'Tiptop',
-                    caption: 'Tiptop design agency website',
-                    image: 'img-tiptop',
-                    link: 'https://tiptopdesign.netlify.app/'
-                },
                 {
                     name: 'World Citizen',
                     caption: 'World citizen website',
@@ -86,25 +75,28 @@ export default {
 .Projects {
     padding: 4em 0;
     font-size: 1.2rem;
-    line-height: 30px;
+
+    .projects-header {
+        width: 80vw;
+        text-align: center;
+        margin: 0 auto 50px;
+
+        .title1 {
+            margin-bottom: 10px;
+        }
+    }
 
     .projects-inner {
-        .projects-header {
-            width: 80vw;
-            text-align: center;
-            margin: 0 auto 35px;
-
-            .title1 {
-                margin-bottom: 10px;
-            }
-        }
+        width: 100%;
+        display: flex;
+        display: -webkit-flex;
 
         .project {
             height: fit-content;
             border-radius: var(--border-radius);
-            padding: 5px;
+            //   padding: 5px;
             background: #ffec8e27;
-            overflow: hidden;
+            //   overflow: hidden;
             transition: padding 1s ease;
 
             .project-img {
@@ -150,22 +142,16 @@ export default {
 
 @media screen and (min-width: 768px) {
     .Projects {
-        .projects-inner {
-            width: 100%;
-            display: flex;
-            display: -webkit-flex;
-            flex-wrap: wrap;
-            // margin-bottom: 60px;
+        .projects-header {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-            .projects-header {
-                width: 60%;
-                margin-left: auto;
-                margin-right: auto;
-            }
+        .projects-inner {
 
             .project {
                 width: 50%;
-                margin-left: 0;
             }
         }
     }
@@ -173,17 +159,10 @@ export default {
 
 @media screen and (min-width: 992px) {
     .Projects {
-        font-size: 1.3rem;
+
         // line-height: 55px;
-
-        .projects-inner {
-            justify-content: space-between;
-            padding-top: 80px;
-
-            .projects-header {
-                width: 50%;
-            }
+        .projects-header {
+            width: 40%;
         }
     }
-}
-</style>
+}</style>
