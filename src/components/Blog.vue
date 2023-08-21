@@ -15,20 +15,23 @@
                 </div>
             </div>
         </div>
-        <Button id="readBtn" link="#" text="Read more" />
+        <a href="https://dev.to/isonguyom" class="btn-wrapper">
+            <Icon icon="material-symbols:read-more" width="50" />
+        </a>
     </section>
 </template>
 
 <script>
+import { Icon } from '@iconify/vue'
 // import { gsap } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // gsap.registerPlugin(ScrollTrigger);
-import Button from './Button.vue'
+
 
 export default {
     // eslint-disable-next-line vue/no-reserved-component-names
-    components: { Button },
+    components: { Icon },
     data() {
         return {
             posts: [
@@ -44,7 +47,7 @@ export default {
                 },
                 {
                     title: 'HOW TO BUILD A MEVN APP WITH VITE FRONTEND (PART 2)',
-                    link: '',
+                    link: 'https://dev.to/isonguyom/how-to-build-a-mevn-app-with-vite-frontend-part-2-2lh8',
                     image: 'mevn-vite_cover.png',
                     platform: 'dev.to',
                     platformLink: 'https://dev.to/isonguyom',
@@ -54,11 +57,11 @@ export default {
                 },
                 {
                     title: 'HOW TO BUILD A MEVN APP WITH VITE FRONTEND (PART 3)',
-                    link: 'https://dev.to/isonguyom/how-to-build-a-mevn-app-with-vite-frontend-part-2-2lh8',
+                    link: 'https://dev.to/isonguyom/how-to-build-a-mevn-app-with-vite-frontend-part-3-j9m',
                     image: 'mevn-vite_cover.png',
                     platform: 'dev.to',
                     platformLink: 'https://dev.to/isonguyom',
-                    date: '17 Aug 2023',
+                    date: '21 Aug 2023',
                     ecerpt: 'Congratulations! You have successfully developed your MEVN CRUD application'
                 }
             ]
@@ -84,7 +87,7 @@ export default {
     min-height: fit-content;
 
     .posts-wrapper {
-        margin: 35px 0;
+        margin: 10px 0;
         display: flex;
         display: -webkit-flex;
         flex-direction: column;
@@ -95,13 +98,13 @@ export default {
             width: 80vw;
             height: fit-content;
             background: var(--primary-color);
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             border-radius: var(--border-radius);
             border: 1px solid rgb(221, 220, 220);
             transition: all 0.5s ease-in;
 
             .post-img {
-                height: 250px;
+                height: 220px;
             }
 
             .post-text {
@@ -142,9 +145,19 @@ export default {
         }
     }
 
-    #readBtn {
-        margin-left: auto;
-        margin-right: auto;
+    .btn-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-dark);
+        border: 0;
+        background: transparent;
+        margin: 0 auto;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--secondary-color)
+        }
     }
 }
 

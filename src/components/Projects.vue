@@ -14,23 +14,24 @@
                     <img class="project-img" :src="`images/${project.image}.png`" :alt="project.name" />
                     <a :href="project.link" class="project-caption">{{ project.caption }}</a>
                 </div>
+                <a href="https://github.com/isonguyom/" class="btn-wrapper">
+                    <Icon icon="material-symbols:read-more" width="50" />
+                </a>
             </div>
         </div>
-
-        <Button id="seeBtn" link="https://github.com/isonguyom?tab=repositories" text="See more" />
     </section>
 </template>
 
 <script>
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Icon } from '@iconify/vue'
 
 gsap.registerPlugin(ScrollTrigger)
-import Button from './Button.vue'
 
 export default {
     // eslint-disable-next-line vue/no-reserved-component-names
-    components: { Button },
+    components: { Icon },
     data() {
         return {
             projects: [
@@ -133,6 +134,21 @@ export default {
                 }
             }
         }
+
+        .btn-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            border: 0;
+            background: transparent;
+            margin: 0 auto;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--secondary-color)
+            }
+        }
     }
 
     #seeBtn {
@@ -165,4 +181,5 @@ export default {
             width: 40%;
         }
     }
-}</style>
+}
+</style>

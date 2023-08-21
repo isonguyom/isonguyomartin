@@ -34,14 +34,15 @@ export default {
                     class: 'web',
                     icon: 'iconoir:dev-mode-laptop',
                     text: 'With a solid foundation in HTML, CSS, and JavaScript, I am capable of building user-friendly interfaces that deliver exceptional user experiences.',
-                    tools: 'HTML/CSS, JavaScript, Vuejs, Node.js, Express.js, MongoDB, SCSS, Bootstrap, Git/Github, Wordpress'
+                    tools:
+                        'HTML/CSS, JavaScript, Vuejs, Node.js, Express.js, MongoDB, SCSS, Bootstrap, Git/Github, Wordpress'
                 },
                 {
                     title: 'Big Data',
                     class: 'data',
                     icon: 'eos-icons:big-data-outlined',
                     text: 'I extract, analyse, and make sense of large and complex data sets and leverage them to solve problems, drive innovation, and make data-driven decisions.',
-                    tools: 'Python, Hadoop, Hive, Spark, SQL, MS Excel, MongoDB, '
+                    tools: 'Python, Hadoop, Hive, Spark, SQL, MS Excel'
                 },
                 {
                     title: 'Design',
@@ -54,7 +55,7 @@ export default {
                     title: 'Marine-tech',
                     class: 'marine',
                     icon: 'ri:ship-line',
-                    text: "My academic background in marine engineering, coupled with my tech skills, has fueled an enthusiasm for providing digital solutions to challenges in the maritime industry. Embarking on a marine-tech project: I am glad to be on the team.",
+                    text: 'My academic background in marine engineering, coupled with my tech skills, has fueled an enthusiasm for providing digital solutions to challenges in the maritime industry. \rEmbarking on a marine-tech project: I am glad to be on the team.',
                     tools: 'C++, Google Drive'
                 }
             ]
@@ -123,20 +124,24 @@ export default {
                     font-size: 1.4rem;
                     margin-left: 15px;
                     text-transform: uppercase;
+                    color: var(--title-light);
                 }
             }
 
             &.web {
                 background: var(--primary-color);
-
             }
 
             &.data {
                 background-color: var(--secondary-color);
                 color: var(--text-dark);
 
+                .skill-title {
+                    color: var(--title-dark);
+                }
+
                 .icon {
-                    color: var(--text-dark);
+                    color: var(--title-dark);
                 }
             }
 

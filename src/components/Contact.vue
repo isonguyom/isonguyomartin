@@ -100,7 +100,6 @@ export default {
     }
 
     .form-wrapper {
-        font-size: 1.2rem;
         width: 100%;
         background: linear-gradient(to bottom right, #111111, #11111165);
         border-radius: var(--border-radius);
@@ -120,9 +119,9 @@ export default {
             width: 100%;
 
             label {
-                color: var(--title-light);
+                color: var(--text-light);
                 display: block;
-                margin-bottom: 5px;
+                margin-bottom: 1px;
             }
 
             input,
@@ -132,7 +131,7 @@ export default {
                 padding: 1em;
                 border-radius: var(--border-radius);
                 border: 1px solid #2b2b2b1f;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
                 background-color: #b026e213;
                 transition: border-color 0.5s ease;
                 color: var(--title-light);
@@ -168,7 +167,8 @@ export default {
 
     .copyright {
         color: var(--text-light);
-        margin-top: 80px;
+        margin-top: 30px;
+        font-size: 0.9rem;
     }
 }
 
@@ -193,7 +193,7 @@ export default {
     .Contact {
 
         .form-wrapper {
-            width: 60%;
+            width: 50%;
 
             #contactForm {
 

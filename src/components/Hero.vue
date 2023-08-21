@@ -19,9 +19,10 @@
                       <Icon icon="ph:file-text-light" width="25" />
                   </a> -->
             </div>
-            <div class="btn-wrapper">
-                <Button link="#contact" text="Hire me" />
-            </div>
+
+            <a href="#skills" class="btn-wrapper">
+                <Icon icon="fluent-mdl2:down" width="30" />
+            </a>
         </div>
     </section>
 </template>
@@ -33,11 +34,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-import Button from './Button.vue'
 
 export default {
     // eslint-disable-next-line vue/no-reserved-component-names
-    components: { Button, Icon },
+    components: { Icon },
     data() {
         return {
             socialLinks: [
@@ -148,8 +148,13 @@ export default {
 
         .btn-wrapper {
             width: fit-content;
-            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            background: transparent;
             margin: 0 auto;
+            cursor: pointer;
         }
     }
 
