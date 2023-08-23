@@ -1,11 +1,11 @@
 /* color palette from <https://github.com/vuejs/theme> */
-@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap');
 
 /* semantic variables for this project */
 :root {
-  --text-font: "Bricolage Grotesque", sans-serif;
-  --title-font: "Inknut Antiqua", serif;
+  --text-font: 'Bricolage Grotesque', sans-serif;
+  --title-font: 'Inknut Antiqua', serif;
   --primary-color: #662066;
   --secondary-color: #ffec8e;
   --text-light: #ccc6ce;
@@ -42,6 +42,7 @@ body {
   font-family: var(--text-font);
   font-weight: 400;
   font-size: 17px;
+  color: var(--text-dark);
   line-height: 1.8em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

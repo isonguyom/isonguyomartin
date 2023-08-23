@@ -1,12 +1,10 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import { reactive } from "vue";
-import Loader from './components/Loader.vue';
+import { reactive } from 'vue'
+import Loader from './components/Loader.vue'
 // import Nav from './components/Nav.vue';
 
-
-
-const state = reactive({ isLoading: false });
+const state = reactive({ isLoading: false })
 </script>
 
 <template>
