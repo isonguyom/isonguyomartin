@@ -116,8 +116,9 @@ export default {
   .hero-text {
     font-size: 1.3rem;
     text-align: center;
-    color: var(--title-light);
-    mix-blend-mode: difference;
+    color: var(--title-dark);
+    background: transparent;
+    // mix-blend-mode: difference;
 
     .hero-caption {
       margin-bottom: 25px;
@@ -169,7 +170,7 @@ export default {
   }
 
   .curve {
-    width: 60%;
+    width: 45%;
     min-height: 100vh;
     background-color: var(--secondary-color);
     position: absolute;

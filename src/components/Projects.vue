@@ -68,6 +68,20 @@ export default {
     //     opacity: 0,
     //     stagger: .2
     // });
+
+    gsap.from('.Projects .title1', {
+      delay: 0.1,
+      duration: 1,
+      ease: 'bounce.out',
+      y: -100,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '.Projects',
+        start: 'top center',
+        end: 'bottom top',
+        toggleActions: 'play reverse play reverse',
+      },
+    });
   }
 }
 </script>

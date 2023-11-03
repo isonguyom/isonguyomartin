@@ -63,10 +63,9 @@ export default {
   mounted() {
     gsap.from('.Contact', {
       scrollTrigger: '.Contact',
-      delay: 0.5,
-      duration: 1,
+      delay: 0.2,
+      duration: 0.5,
       opacity: 0,
-      stagger: 0.2
     })
   },
 

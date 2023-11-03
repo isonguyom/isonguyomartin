@@ -2,7 +2,7 @@
 <template>
   <section class="section-wrapper Blog">
     <h3 class="title1">Blog</h3>
-    <div class="posts-wrapper">
+    <div class="posts-wrapper" ref="postsWrapper">
       <div class="post" v-for="post in posts" :key="post.title">
         <img class="post-img" :src="`images/${post.image}`" :alt="post.title" />
         <div class="post-text">
@@ -20,10 +20,10 @@
 </template>
 
 <script>
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
   // eslint-disable-next-line vue/no-reserved-component-names
@@ -61,19 +61,43 @@ export default {
         }
       ]
     }
-  }
+  },
 
-  // mounted() {
-  //     gsap.from(".post", {
-  //         scrollTrigger: ".post", // start the animation when ".box" enters the viewport (once)
-  //         // scrub: 1,
-  //         delay: .5,
-  //         duration: 1,
-  //         y: 100,
-  //         opacity: 1,
-  //         stagger: .2
-  //     });
-  // }
+  methods: {
+    animatePosts() {
+      gsap.set(this.$refs.postsWrapper.children, { y: 100, opacity: 0 });
+    gsap.to(this.$refs.postsWrapper.children, {
+      y: 0,
+      opacity: 1,
+      stagger: 0.4,
+      duration: 3,
+      scrollTrigger: {
+        trigger: this.$refs.postsWrapper,
+        start: 'top bottom',
+        end: 'bottom top',
+        toggleActions: 'play reverse play reverse',
+      },
+    });
+  }
+  },
+
+  mounted() {
+    this.animatePosts()
+    gsap.from('.Blog .title1', {
+      delay: 0.5,
+      duration: 1,
+      ease: 'bounce.out',
+      y: -100,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '.Blog',
+        start: 'top center',
+        end: 'bottom top',
+        toggleActions: 'play reverse play reverse',
+      },
+    });
+    
+  }
 }
 </script>
 

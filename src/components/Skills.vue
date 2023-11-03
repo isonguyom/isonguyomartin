@@ -3,8 +3,8 @@
   <section class="container section-wrapper">
     <div class="Skills">
       <h3 class="title1">Specializations</h3>
-      <div class="skills-wrapper">
-        <div class="skill" :class="skill.class" v-for="skill in skills" :key="skill.title">
+      <div class="skills-wrapper" ref="skillsWrapper">
+        <div class="skill" :class="skill.class" v-for="(skill, index) in skills" :key="index">
           <div class="skill-header">
             <Icon class="icon" :icon="skill.icon" width="80" stroke-width="2" />
             <h4 class="skill-title">{{ skill.title }}</h4>
@@ -35,7 +35,7 @@ export default {
           icon: 'iconoir:dev-mode-laptop',
           text: 'With a solid foundation in HTML, CSS, and JavaScript, I am capable of building user-friendly interfaces that deliver exceptional user experiences.',
           tools:
-            'HTML/CSS, JavaScript, Vuejs, Node.js, Express.js, MongoDB, SCSS, Bootstrap, Git/Github, Wordpress'
+            'HTML/CSS, JavaScript, Vuejs, React Node.js, Express.js, MongoDB, SCSS, Bootstrap, Git/Github, Wordpress'
         },
         {
           title: 'Big Data',
@@ -56,37 +56,46 @@ export default {
           class: 'marine',
           icon: 'ri:ship-line',
           text: 'My academic background in marine engineering, coupled with my tech skills, has fueled an enthusiasm for providing digital solutions to challenges in the maritime industry. \rEmbarking on a marine-tech project: I am glad to be on the team.',
-          tools: 'C++, Google Drive'
+          tools: 'C++'
         }
       ]
     }
   },
 
+  methods: {
+    animateSkills() {
+      gsap.set(this.$refs.skillsWrapper.children, { y: 100, opacity: 0 });
+    gsap.to(this.$refs.skillsWrapper.children, {
+      y: 0,
+      opacity: 1,
+      stagger: 0.4,
+      duration: 3,
+      scrollTrigger: {
+        trigger: this.$refs.skillsWrapper,
+        start: 'top center',
+        end: 'bottom top',
+        toggleActions: 'play reverse play reverse',
+      },
+    });
+  }
+  },
+
   mounted() {
-    // const tl = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: '.Skills'
-    //   }
-    // })
-    // tl.from('.skill', {
-    //   x: -500,
-    //   duration: 2,
-    //   stagger: 0.2,
-    //   opacity: 0
-    // }).from('.title1', {
-    //   delay: 0.5,
-    //   duration: 1,
-    //   ease: 'bounce.out',
-    //   y: -100,
-    //   opacity: 0
-    // })
-    // gsap.from('.tool', {
-    //   scrollTrigger: '.Tools',
-    //   delay: 0.5,
-    //   duration: 3,
-    //   stagger: 0.3,
-    //   opacity: 0
-    // })
+    this.animateSkills()
+    gsap.from('.Skills .title1', {
+      delay: 0.5,
+      duration: 1,
+      ease: 'bounce.out',
+      y: -100,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '.Skills',
+        start: 'top center',
+        end: 'bottom top',
+        toggleActions: 'play reverse play reverse',
+      },
+    });
+    
   }
 }
 </script>
