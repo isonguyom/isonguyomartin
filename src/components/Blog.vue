@@ -9,8 +9,7 @@
           <a :href="post.link" class="post-title">{{ post.title }}</a>
           <p class="post-ecerpt">{{ post.ecerpt }}<a id="more" :href="post.link">...</a></p>
           <div class="post-footer">
-            <a class="post-platform" href="">{{ post.platform }}</a
-            ><span class="post-date">{{ post.date }}</span>
+            <a class="post-platform" href="">{{ post.platform }}</a><span class="post-date">{{ post.date }}</span>
           </div>
         </div>
       </div>
@@ -20,8 +19,7 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,19 +64,19 @@ export default {
   methods: {
     animatePosts() {
       gsap.set(this.$refs.postsWrapper.children, { y: 100, opacity: 0 });
-    gsap.to(this.$refs.postsWrapper.children, {
-      y: 0,
-      opacity: 1,
-      stagger: 0.4,
-      duration: 3,
-      scrollTrigger: {
-        trigger: this.$refs.postsWrapper,
-        start: 'top bottom',
-        end: 'bottom top',
-        toggleActions: 'play reverse play reverse',
-      },
-    });
-  }
+      gsap.to(this.$refs.postsWrapper.children, {
+        y: 0,
+        opacity: 1,
+        stagger: 0.4,
+        duration: 3,
+        scrollTrigger: {
+          trigger: this.$refs.postsWrapper,
+          start: 'top bottom',
+          end: 'bottom top',
+          toggleActions: 'play reverse play reverse',
+        },
+      });
+    }
   },
 
   mounted() {
@@ -96,7 +94,7 @@ export default {
         toggleActions: 'play reverse play reverse',
       },
     });
-    
+
   }
 }
 </script>
@@ -111,16 +109,17 @@ export default {
     display: -webkit-flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 
     .post {
       max-width: 400px;
       width: 80vw;
       height: fit-content;
       background: var(--primary-color);
-      margin-bottom: 10px;
       border-radius: var(--border-radius);
       border: 1px solid rgb(221, 220, 220);
       transition: all 0.5s ease-in;
+      box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
 
       .post-img {
         height: 220px;
@@ -165,14 +164,10 @@ export default {
   }
 
   .btn-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     color: var(--text-dark);
-    border: 0;
-    background: transparent;
-    margin: 0 auto;
-    cursor: pointer;
+    margin-top: 40px;
+    text-align: center;
     text-decoration: underline;
 
     &:hover {
@@ -205,7 +200,7 @@ export default {
   .Blog {
     .posts-wrapper {
       .post {
-        max-width: 30%;
+        max-width: 330px;
         width: 30%;
         display: flex;
         display: -webkit-flex;

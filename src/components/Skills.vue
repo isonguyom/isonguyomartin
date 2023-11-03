@@ -19,8 +19,7 @@
 
 <script>
 import { Icon } from '@iconify/vue'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsap, ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -65,19 +64,19 @@ export default {
   methods: {
     animateSkills() {
       gsap.set(this.$refs.skillsWrapper.children, { y: 100, opacity: 0 });
-    gsap.to(this.$refs.skillsWrapper.children, {
-      y: 0,
-      opacity: 1,
-      stagger: 0.4,
-      duration: 3,
-      scrollTrigger: {
-        trigger: this.$refs.skillsWrapper,
-        start: 'top center',
-        end: 'bottom top',
-        toggleActions: 'play reverse play reverse',
-      },
-    });
-  }
+      gsap.to(this.$refs.skillsWrapper.children, {
+        y: 0,
+        opacity: 1,
+        stagger: 0.4,
+        duration: 3,
+        scrollTrigger: {
+          trigger: this.$refs.skillsWrapper,
+          start: 'top center',
+          end: 'bottom top',
+          toggleActions: 'play reverse play reverse',
+        },
+      });
+    }
   },
 
   mounted() {
@@ -95,7 +94,7 @@ export default {
         toggleActions: 'play reverse play reverse',
       },
     });
-    
+
   }
 }
 </script>

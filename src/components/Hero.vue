@@ -3,22 +3,28 @@
   <section class="section-wrapper Hero" ref="hero">
     <div class="curve" />
     <div class="hero-text" ref="heroText">
-      <h1 class="hero-caption caption">Frontend Developer</h1>
-      <p class="para hero-para">
-        Hey, I am Martin, from Nigeria. <br />I am a MEVN developer majoring in frontend (Vuejs).
-        <br />
-        My motivation is that of a problem solver who leverages digital tools and skills to provide
-        data-driven solutions to challenging problems. <br />
-        I am passionate about Marine-tech. I am available to learn, work, connect, build, and grow.
-      </p>
+      <div class="text-inner" ref="textInner">
+        <h1 class="hero-caption caption">Frontend Developer</h1>
+        <p class="para hero-para">
+          Hey, I am Martin, from Nigeria. <br />I am a MEVN developer majoring in frontend (Vuejs).
+          <br />
+          My motivation is that of a problem solver who leverages digital tools and skills to provide
+          data-driven solutions to challenging problems. <br />
+          I am passionate about Marine-tech. I am available to learn, work, connect, build, and grow.
+        </p>
+      </div>
+      <div class="text-inner-clone" ref="textInnerClone">
+        <h1 class="hero-caption caption">Frontend Developer</h1>
+        <p class="para hero-para">
+          Hey, I am Martin, from Nigeria. <br />I am a MEVN developer majoring in frontend (Vuejs).
+          <br />
+          My motivation is that of a problem solver who leverages digital tools and skills to provide
+          data-driven solutions to challenging problems. <br />
+          I am passionate about Marine-tech. I am available to learn, work, connect, build, and grow.
+        </p>
+      </div>
       <div class="socials">
-        <a
-          v-for="link in socialLinks"
-          :key="link.name"
-          class="social-link"
-          :href="link.link"
-          :title="link.name"
-        >
+        <a v-for="link in socialLinks" :key="link.name" class="social-link" :href="link.link" :title="link.name">
           <Icon :icon="link.icon" width="25" />
         </a>
         <!-- <a class="social-link" href="files/martin-isonguyo-cv.pdf" title="Download CV" download>
@@ -58,6 +64,9 @@ export default {
   },
 
   mounted() {
+  //   const textContainerRect = this.$refs.textInner.getBoundingClientRect();
+  // this.$refs.textInnerClone.style.top = `${textContainerRect.top}px`;
+  // this.$refs.textInnerClone.style.left = `${textContainerRect.left}px`;
     // this.$refs.heroText.style.backgroundColor = "#662066"
     // if (this.$refs.heroText.style.backgroundColor == "#662066") {
     //     this.$refs.heroText.style.color = "white"
@@ -116,9 +125,44 @@ export default {
   .hero-text {
     font-size: 1.3rem;
     text-align: center;
-    color: var(--title-dark);
     background: transparent;
+    position: relative;
     // mix-blend-mode: difference;
+
+    .text-inner {
+      position: relative;
+      color: var(--primary-color);
+     
+
+
+      .para {
+        font-family: var(--text-font);
+        letter-spacing: 2px; 
+        font-weight: 700;
+        color:  var(--secondary-color);
+      }
+    }
+
+    .text-inner-clone {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      -webkit-text-stroke: 1px var(--secondary-color);
+      // font-weight: 700;
+      color: transparent;
+      // mix-blend-mode: difference;
+
+
+      
+      .para {
+        font-family: var(--text-font);
+        letter-spacing: 2px;
+        font-weight: 700;
+        -webkit-text-stroke: 1px var(--primary-color);
+      }
+    }
 
     .hero-caption {
       margin-bottom: 25px;
@@ -170,13 +214,13 @@ export default {
   }
 
   .curve {
-    width: 45%;
+    width: 40%;
     min-height: 100vh;
     background-color: var(--secondary-color);
     position: absolute;
     top: 0;
     right: 0;
-    border-bottom-left-radius: 100%;
+    border-bottom-left-radius: 80%;
   }
 }
 

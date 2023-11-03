@@ -7,26 +7,13 @@
       <form id="contactForm" @submit.prevent="sendEmail">
         <div class="form-control" v-for="item in inputs" :key="item.id">
           <label :for="item.id">{{ item.label }}</label>
-          <input
-            :type="item.type"
-            :name="item.id"
-            :id="item.id"
-            v-model="item.value"
-            :placeholder="item.placeholder"
-            required
-          />
+          <input :type="item.type" :name="item.id" :id="item.id" v-model="item.value" :placeholder="item.placeholder"
+            required />
         </div>
         <div class="form-control">
           <label for="contactMessage">Message</label>
-          <textarea
-            name="contactMessage"
-            id="contactMessage"
-            v-model="contactMessage"
-            cols="30"
-            rows="10"
-            placeholder="Your Message"
-            required
-          ></textarea>
+          <textarea name="contactMessage" id="contactMessage" v-model="contactMessage" cols="30" rows="10"
+            placeholder="Your Message" required></textarea>
         </div>
         <button type="submit">Send Message</button>
       </form>
@@ -63,8 +50,8 @@ export default {
   mounted() {
     gsap.from('.Contact', {
       scrollTrigger: '.Contact',
-      delay: 0.2,
-      duration: 0.5,
+      delay: 0.5,
+      duration: 1,
       opacity: 0,
     })
   },
